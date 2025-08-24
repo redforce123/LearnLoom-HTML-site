@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoom - Online Tutoring</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
+    <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for a clean, professional look */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+    <!-- Google Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "LearnLoom",
+      "url": "https://www.learnloom.com",
+      "logo": "https://www.learnloom.com/Images/LearnLoom_Logo.png",
+      "description": "LearnLoom provides personalized online tutoring to help students build confidence and excel in their studies.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-555-0199",
+        "contactType": "customer service",
+        "email": "contact@learnloom.com"
+      },
+      "sameAs": [
+        "https://www.facebook.com/learnloom",
+        "https://www.twitter.com/learnloom",
+        "https://www.linkedin.com/company/learnloom"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-[rgb(240,191,76)] text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Header and Navigation Bar -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+
+        <!-- Hero Section -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
+            <!-- Text and CTA section -->
+            <div class="md:w-1/2">
+                <h1 class="text-5xl md:text-6xl font-bold text-[#EA0264] mb-4 leading-tight">
+                    A Loom of Ideas, A World of Learning.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+                    Personalized online tutoring to build confidence and excel in your studies. We make complex concepts simple and engaging for every student.
+                </p>
+                <a href="Book Demo.html" class="inline-block bg-[#EA0264] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#C90057] transition-colors duration-300">
+                    Book a Free Demo
+                </a>
+            </div>
+            
+            <!-- Image section -->
+            <div class="md:w-1/2">
+                <img src="Images/student.png" alt="A student engaged in online learning" class="w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div id="services" class="mt-20">
+            <h2 class="text-3xl font-semibold text-center text-[#EA0264] mb-12">What We Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Maths Tile -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <details>
+                        <summary class="text-xl font-bold text-[#252525] cursor-pointer">Maths</summary>
+                        <ul class="text-left mt-4 space-y-2 text-[#252525] list-disc list-inside">
+                            <li>NAPLAN Preparation</li>
+                            <li>Selective Entry Exams</li>
+                            <li>High School Calculus</li>
+                        </ul>
+                    </details>
+                </div>
+                <!-- English Tile -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <details>
+                        <summary class="text-xl font-bold text-[#252525] cursor-pointer">English</summary>
+                        <ul class="text-left mt-4 space-y-2 text-[#252525] list-disc list-inside">
+                            <li>Essay Writing</li>
+                            <li>Reading Comprehension</li>
+                            <li>Grammar & Punctuation</li>
+                        </ul>
+                    </details>
+                </div>
+                <!-- Science Tile -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <details>
+                        <summary class="text-xl font-bold text-[#252525] cursor-pointer">Science</summary>
+                        <ul class="text-left mt-4 space-y-2 text-[#252525] list-disc list-inside">
+                            <li>Physics</li>
+                            <li>Chemistry</li>
+                            <li>Biology</li>
+                        </ul>
+                    </details>
+                </div>
+                <!-- Vacation Classes Tile -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <details>
+                        <summary class="text-xl font-bold text-[#252525] cursor-pointer">Vacation Classes</summary>
+                        <ul class="text-left mt-4 space-y-2 text-[#252525] list-disc list-inside">
+                            <li>Summer Skill Workshops</li>
+                            <li>Holiday Exam Prep</li>
+                            <li>Creative Project Courses</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Messenger Chat Button -->
+    <a href="https://m.me/720925057767597" target="_blank" rel="noopener noreferrer" title="Chat on Messenger" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.493 1.825 6.594 4.574 8.544V24l3.334-1.933a13.23 13.23 0 004.092.622C18.627 22.789 24 17.815 24 11.678 24 5.54 18.627 0 12 0zM7.79 15.694l-2.58-2.58-5.437 2.58L6.857 8.61l2.58 2.58 5.437-2.58-7.084 7.084z" transform="translate(2.5 -0.5) scale(0.9)"/>
+        </svg>
+        <span class="sr-only">Chat on Messenger</span>
+    </a>
+
+    <!-- Script to load header and footer -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

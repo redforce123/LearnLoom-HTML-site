@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoom - Blog & Insights</title>
+    <!-- Favicon -->
+       <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
+    <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for a clean, professional look */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-[#F0BF4C] text-[#252525] min-h-screen flex flex-col">
+
+    <!-- Header and Navigation Bar (Loaded by main.js) -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-12 flex-grow">
+
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-black">Our Blog & Insights</h1>
+            <p class="text-lg text-[#252525] mt-2">Tips, stories, and advice on learning and education.</p>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Blog Post Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2">August 22, 2025</p>
+                    <h2 class="text-2xl font-bold text-black mb-3">Unlock Your Potential with a Formula Sheet</h2>
+                    <p class="text-gray-700 mb-4">
+                        Studying for a math or science exam can feel overwhelming. You have to remember complex concepts, tricky methods, and—of course—all those formulas! But what if there was a tool that could help you ace your tests without relying solely on a perfect memory?
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href=".\\blogs\\22082025_blog.html" class="font-semibold text-[#EA0264] hover:underline">Read More &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Blog Post Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2">October 15, 2023</p>
+                    <h2 class="text-2xl font-bold text-black mb-3">Navigating the Challenges of High School Calculus</h2>
+                    <p class="text-gray-700 mb-4">
+                        Calculus can be intimidating, but it doesn't have to be. We break down common hurdles and provide tips for building a strong foundation.
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="font-semibold text-[#EA0264] hover:underline">Read More &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Blog Post Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <div class="p-6 flex-grow">
+                    <p class="text-sm text-gray-500 mb-2">October 5, 2023</p>
+                    <h2 class="text-2xl font-bold text-black mb-3">Why Personalized Tutoring is a Game-Changer</h2>
+                    <p class="text-gray-700 mb-4">
+                        Explore the benefits of one-on-one learning and how tailored instruction can unlock a student's true potential.
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#" class="font-semibold text-[#EA0264] hover:underline">Read More &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Simple Footer (Loaded by main.js) -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Script to load header and footer -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
