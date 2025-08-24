@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LearnLoom</title>
+       <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
+    <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for a clean, professional look */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-[#F0BF4C] text-[#252525] min-h-screen flex flex-col">
+
+    <!-- Header and Navigation Bar (Loaded by main.js) -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-12 flex-grow flex flex-col items-center justify-center">
+        <!-- Page Title -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-black">Student & Parent Login</h1>
+            <p class="text-lg text-gray-700 mt-2">Access your LearnLoom portal below.</p>
+        </div>
+
+        <!-- TutorBird Login Widget -->
+        <div class="w-full max-w-2xl bg-white rounded-xl shadow-lg overflow-hidden">
+            <iframe 
+                src="https://ea.tutorbird.com/Website/v3/en/Website/v3/widget.html?settings=eyJTY2hvb2xJRCI6InNjaF9GYnNKUSIsIldlYnNpdGVJRCI6Indic196OFBKaiIsIldlYnNpdGVCbG9ja0lEIjoid2JiXzQ5SnZKUyJ9&sandboxed=false" 
+                class="w-full h-[600px] border-0" 
+                title="TutorBird Login Widget">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- Simple Footer (Loaded by main.js) -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Script to load header and footer -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
