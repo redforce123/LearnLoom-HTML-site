@@ -47,6 +47,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    /**
+     * Sets up the interactive tab functionality.
+     */
+    const initializeTabs = () => {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        if (tabButtons.length === 0) return; // Don't run if no tabs on page
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetPanel = document.querySelector(button.dataset.tabTarget);
+
+                // Deactivate all buttons and hide all panels
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('text-[#EA0264]', 'border-[#EA0264]');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                    
+                    const panel = document.querySelector(btn.dataset.tabTarget);
+                    if (panel) panel.classList.add('hidden');
+                });
+
+                // Activate the clicked button and show its panel
+                button.classList.add('text-[#EA0264]', 'border-[#EA0264]');
+                button.classList.remove('text-gray-500', 'border-transparent');
+                
+                if (targetPanel) targetPanel.classList.remove('hidden');
+            });
+        });
+    };
+
     // Load the navbar, then initialize its mobile menu functionality.
     loadHTML('navbar.html', 'navbar-placeholder', initializeMobileMenu);
     // Load the footer. (Assuming you have a footer.html file)
@@ -54,4 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize the FAQ accordion on pages that have it.
     initializeFaqAccordion();
+
+    // Initialize the tabs on pages that have them.
+    initializeTabs();
 });
