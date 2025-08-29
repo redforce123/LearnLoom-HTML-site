@@ -27,8 +27,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    /**
+     * Sets up the interactive accordion functionality for the FAQ page.
+     */
+    const initializeFaqAccordion = () => {
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+
+                // Toggle the content's visibility
+                content.classList.toggle('hidden');
+
+                // Rotate the icon to indicate state
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    };
+
     // Load the navbar, then initialize its mobile menu functionality.
     loadHTML('navbar.html', 'navbar-placeholder', initializeMobileMenu);
     // Load the footer. (Assuming you have a footer.html file)
     loadHTML('footer.html', 'footer-placeholder');
+
+    // Initialize the FAQ accordion on pages that have it.
+    initializeFaqAccordion();
 });
