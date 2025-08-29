@@ -17,6 +17,14 @@
       body {
         font-family: 'Inter', sans-serif;
       }
+      /* Custom scrollbar for tabs on mobile */
+      .custom-scrollbar::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+      }
+      .custom-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
     </style>
     <!-- Google Schema Markup for SEO -->
     <script type="application/ld+json">
@@ -127,7 +135,7 @@
                         <!-- Vacation Classes Card -->
                         <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
                             <div class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
-                                <img src="Images/vacation.jpg" alt="A bright sun icon representing fun and engaging vacation classes and skill workshops at LearnLoom in Australia." class="w-full h-full object-cover">
+                                <img src="Images/Vacation.jpg" alt="A bright sun icon representing fun and engaging vacation classes and skill workshops at LearnLoom in Australia." class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Vacation Classes</h3>
                             <p class="text-gray-600">Skill workshops and creative project courses.</p>
