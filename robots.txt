@@ -1,0 +1,9 @@
+# Allow all web crawlers full access to the site.
+User-agent: *
+Allow: /
+
+# Disallow nothing.
+Disallow:
+
+# Point to the sitemap for better indexing (update with your real domain).
+Sitemap: https://www.learnloomglobal.com/sitemap.xml
