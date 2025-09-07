@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unlock Your Potential with a Formula Sheet - LearnLoom</title>
        <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
-    <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="../Images/LearnLoom_Logo.png">
+    <link rel="apple-touch-icon" href="../Images/LearnLoom_Logo.png">
+    <!-- Local Tailwind CSS -->
+    <link href="../css/output.css" rel="stylesheet">
     <style>
       /* Custom font for a clean, professional look */
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -17,11 +17,10 @@
       }
     </style>
 </head>
-<body class="bg-[#F0BF4C] text-[#252525] min-h-screen flex flex-col">
+<body class="bg-amber-50 text-[#252525] min-h-screen flex flex-col">
 
     <!-- Header and Navigation Bar (Loaded by main.js) -->
     <header id="navbar-placeholder"></header>
-
     <!-- Main Content Area -->
     <main class="container mx-auto px-4 py-12 flex-grow">
 
@@ -63,7 +62,7 @@
                 </div>
             </div>
 
-            <h2 class="mt-12">Ready to Get Started?</h2>
+            <h2>Ready to Get Started?</h2>
             <p>
                 You can download a starter formula sheet by right-clicking on the table below and saving it as an image, or simply copying the text. It's a great starting point for your own custom sheet!
             </p>
@@ -90,6 +89,6 @@
     <footer id="footer-placeholder"></footer>
 
     <!-- Script to load header and footer -->
-    <script src="js/main.js" defer></script>
+    <script src="../js/main.js" data-base-path="../" defer></script>
 </body>
 </html>

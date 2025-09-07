@@ -9,8 +9,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
     <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Local Tailwind CSS -->
+    <link href="css/output.css" rel="stylesheet">
     <style>
       /* Custom font for a clean, professional look */
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -81,7 +81,7 @@
         <div class="py-16 mt-12">
             <!-- Tab Navigation -->
             <div class="mb-8">
-                <div class="flex space-x-1 sm:space-x-4 border-b border-gray-300">
+                <div class="flex space-x-1 sm:space-x-4 border-b border-gray-300 overflow-x-auto custom-scrollbar">
                     <button data-tab-target="#services" class="tab-button py-2 px-4 text-lg font-semibold text-[#EA0264] border-b-2 border-[#EA0264]">
                         What We Offer
                     </button>
@@ -242,7 +242,7 @@
                             <div class="p-6 flex-grow flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Ozone Day Workshop</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Explore the science of our atmosphere! A hands-on workshop about the ozone layer, its importance, and how we can protect it.</p>
-                                <a href="#" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</a>
+                                <button type="button" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</button>
                             </div>
                         </div>
                         <!-- Workshop Card 2: Add your poster image in the src attribute -->
@@ -253,7 +253,7 @@
                             <div class="p-6 flex-grow flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Father's Day Workshop</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Celebrate Dad with a special hands-on project! Join us for a fun-filled session of creativity and bonding.</p>
-                                <a href="#" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</a>
+                                <button type="button" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</button>
                             </div>
                         </div>
                         <!-- Workshop Card 3: Add your poster image in the src attribute -->
@@ -264,7 +264,7 @@
                             <div class="p-6 flex-grow flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Math Olympiad Prep</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Get ready for the competition with advanced problem-solving strategies and practice tests.</p>
-                                <a href="#" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</a>
+                                <button type="button" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</button>
                             </div>
                         </div>
                         <!-- You can add more workshop cards here by copying the block above -->
@@ -305,13 +305,11 @@
 
     <!-- Messenger Chat Button -->
     <a href="https://m.me/720925057767597" target="_blank" rel="noopener noreferrer" title="Chat on Messenger" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.493 1.825 6.594 4.574 8.544V24l3.334-1.933a13.23 13.23 0 004.092.622C18.627 22.789 24 17.815 24 11.678 24 5.54 18.627 0 12 0zM7.79 15.694l-2.58-2.58-5.437 2.58L6.857 8.61l2.58 2.58 5.437-2.58-7.084 7.084z" transform="translate(2.5 -0.5) scale(0.9)"/>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2.04 6.5 2.04 12c0 3.03 1.35 5.75 3.51 7.63V22l2.49-1.22c.79.25 1.63.39 2.5.39 5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04zM13.49 14.89l-2.01-1.99-4.48 2.01L11.5 8.51l2.01 1.99 4.48-2.01L13.49 14.89z"/></svg>
         <span class="sr-only">Chat on Messenger</span>
     </a>
 
     <!-- Script to load header and footer -->
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" data-base-path="" defer></script>
 </body>
 </html>

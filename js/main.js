@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Determine the base path for loading assets, defaults to ''
+    const basePath = document.currentScript.dataset.basePath || '';
+
     /**
      * Fetches HTML content from a file and injects it into a specified element.
      * @param {string} filePath - The path to the HTML file to load.
@@ -32,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     const initializeFaqAccordion = () => {
         const faqToggles = document.querySelectorAll('.faq-toggle');
+        if (faqToggles.length === 0) return; // Don't run if no FAQ on page
 
         faqToggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
@@ -77,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Load the navbar, then initialize its mobile menu functionality.
-    loadHTML('navbar.html', 'navbar-placeholder', initializeMobileMenu);
+    loadHTML(`${basePath}navbar.html`, 'navbar-placeholder', initializeMobileMenu);
     // Load the footer. (Assuming you have a footer.html file)
-    loadHTML('footer.html', 'footer-placeholder');
+    loadHTML(`${basePath}footer.html`, 'footer-placeholder');
 
     // Initialize the FAQ accordion on pages that have it.
     initializeFaqAccordion();

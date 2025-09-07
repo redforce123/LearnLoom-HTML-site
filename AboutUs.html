@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - LearnLoom</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
+    <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
+    <!-- Local Tailwind CSS -->
+    <link href="css/output.css" rel="stylesheet">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
       body {
@@ -12,13 +16,11 @@
       }
     </style>
 </head>
-<body class="bg-amber-50 text-gray-800">
-
+<body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
 
     <!-- Navbar is loaded here by main.js -->
     <header id="navbar-placeholder"></header>
-
-    <main class="max-w-3xl mx-auto my-8 lg:my-12 p-6 sm:p-10 bg-white rounded-2xl shadow-lg">
+    <main class="flex-grow max-w-3xl mx-auto my-8 lg:my-12 p-6 sm:p-10 bg-white rounded-2xl shadow-lg">
         <div class="text-center mb-16">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900">About LearnLoom</h1>
             <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">We believe learning should be more than just textbooks and tests — it should spark curiosity, confidence, and creativity.</p>
@@ -108,7 +110,7 @@
     <footer id="footer-placeholder"></footer>
 
     <!-- This script will fetch and inject the navbar, and handle its interactivity -->
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" data-base-path="" defer></script>
 
 
 </html>
