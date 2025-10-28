@@ -230,44 +230,55 @@
                 <!-- Workshops Panel (Hidden by default) -->
                 <div id="workshops" class="tab-panel hidden">
                     <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">Upcoming Workshops</h2>
+                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">Workshops</h2>
                         <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join our special workshops to boost your skills and explore new topics. Seats are limited!</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Workshop Card 1: Add your poster image in the src attribute -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                            <div class="overflow-hidden">
-                                <img src="Images/workshops/OzoneDayWorkshop.jpeg" alt="Poster for Ozone Day Workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Ozone Day Workshop</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Explore the science of our atmosphere! A hands-on workshop about the ozone layer, its importance, and how we can protect it.</p>
-                                <a href="#" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</a>
-                            </div>
-                        </div>
-                        <!-- Workshop Card 2: Add your poster image in the src attribute -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                            <div class="overflow-hidden">
-                                <img src="Images/workshops/FathersDayWorkshop.jpeg" alt="Poster for Father's Day Workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Father's Day Workshop</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Celebrate Dad with a special hands-on project! Join us for a fun-filled session of creativity and bonding.</p>
-                                <a href="#" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</a>
-                            </div>
-                        </div>
-                        <!-- Workshop Card 3: Add your poster image in the src attribute -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                            <div class="overflow-hidden">
-                                <img src="Images/workshops/Olympiad.jpeg" alt="Poster for Math Olympiad Prep" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Math Olympiad Prep</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Get ready for the competition with advanced problem-solving strategies and practice tests.</p>
-                                <a href="#" class="mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</a>
+
+                    <!-- Workshop Sub-navigation -->
+                    <div class="flex justify-center space-x-4 mb-10">
+                        <button data-workshop-tab-target="#upcoming-workshops" class="workshop-tab-button py-2 px-6 font-semibold text-white bg-[#EA0264] rounded-full transition-colors duration-300">Upcoming</button>
+                        <button data-workshop-tab-target="#past-workshops" class="workshop-tab-button py-2 px-6 font-semibold text-gray-600 bg-gray-200 rounded-full transition-colors duration-300">Past</button>
+                    </div>
+
+                    <!-- Upcoming Workshops Panel -->
+                    <div id="upcoming-workshops" class="workshop-tab-panel">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Workshop Card 1 -->
+                           
+                            <!-- Workshop Card 3 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+                                <div class="overflow-hidden">
+                                    <img src="Images/workshops/ChildrensDayWorkshop.jpeg" alt="Poster for free online event Childrens workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 flex-grow flex flex-col">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Emotions and Me</h3>
+                                    <p class="text-gray-600 mb-4 flex-grow">Our emotions make us human — but understanding them makes us strong!Join us for an interactive 1-hour workshop where children explore the colorful world of feelings through
+stories, games, and art.</p>
+                                    <button data-modal-target="#form-modal" data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSfw_UCuDudxU0s3Jj2iYx_8f6g7qZ5hY3jX9kL8wN2mP4oV1Q/viewform?embedded=true" class="register-modal-button mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</button>
+                                </div>
                             </div>
                         </div>
-                        <!-- You can add more workshop cards here by copying the block above -->
+                    </div>
+
+                    <!-- Past Workshops Panel (Hidden by default) -->
+                    <div id="past-workshops" class="workshop-tab-panel hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Past Workshop Poster 1 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                                <img src="Images/workshops/OzoneDayWorkshop.jpeg" alt="Poster for past Ozone Day Workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-4"><h3 class="text-lg font-bold text-gray-900 text-center">Ozone Day Workshop</h3></div>
+                            </div>
+                            <!-- Past Workshop Poster 2 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                                <img src="Images/workshops/FathersDayWorkshop.jpeg" alt="Poster for past Father's Day Workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-4"><h3 class="text-lg font-bold text-gray-900 text-center">Father's Day Workshop</h3></div>
+                            </div>
+                            <!-- Past Workshop Poster 3 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                                <img src="Images/workshops/Olympiad.jpeg" alt="Olympiad" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-4"><h3 class="text-lg font-bold text-gray-900 text-center">Olympiad Workshops</h3></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -311,7 +322,73 @@
         <span class="sr-only">Chat on Messenger</span>
     </a>
 
+    <!-- Form Modal -->
+    <div id="form-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl h-full max-h-[90vh] flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-semibold text-gray-800">Register for Workshop</h3>
+                <button id="close-modal-button" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-2 flex-grow">
+                <iframe id="form-iframe" class="w-full h-full border-0" src="" title="Registration Form">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Script to load header and footer -->
     <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const workshopTabButtons = document.querySelectorAll('.workshop-tab-button');
+            const workshopTabPanels = document.querySelectorAll('.workshop-tab-panel');
+
+            workshopTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all buttons
+                    workshopTabButtons.forEach(btn => {
+                        btn.classList.remove('bg-[#EA0264]', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-600');
+                    });
+                    // Activate the clicked button
+                    button.classList.add('bg-[#EA0264]', 'text-white');
+                    button.classList.remove('bg-gray-200', 'text-gray-600');
+
+                    // Hide all panels
+                    workshopTabPanels.forEach(panel => panel.classList.add('hidden'));
+                    // Show the target panel
+                    const targetPanel = document.querySelector(button.dataset.workshopTabTarget);
+                    if (targetPanel) targetPanel.classList.remove('hidden');
+                });
+            });
+
+            // Modal Logic
+            const modal = document.getElementById('form-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const formIframe = document.getElementById('form-iframe');
+            const registerButtons = document.querySelectorAll('.register-modal-button');
+
+            registerButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const formUrl = button.dataset.formUrl;
+                    if (formUrl) {
+                        formIframe.src = formUrl;
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                formIframe.src = ''; // Clear src to stop form activity
+            };
+
+            closeModalButton.addEventListener('click', closeModal);
+        });
+    </script>
 </body>
 </html>
