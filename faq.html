@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,85 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Custom font for a clean, professional look */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
-      }
+        /* Custom font for a clean, professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
     </style>
 </head>
+
 <body class="bg-amber-50 text-[#252525] min-h-screen flex flex-col">
 
-    <!-- Header and Navigation Bar (Loaded by main.js) -->
-    <header id="navbar-placeholder"></header>
+    <!-- Header and Navigation Bar -->
+    <header class="bg-[#FFF] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-2 flex items-center">
+            <!-- Logo/Site Title -->
+            <a href="index.html" class="flex items-center space-x-4">
+                <img src="Images/LearnLoom_Logo.png" alt="LearnLoom Logo" class="h-14 w-auto">
+                <span class="text-3xl font-bold text-black">Learn<span class="text-[#EA0264]">Loom</span></span>
+            </a>
+
+            <!-- Main Navigation Links -->
+            <div class="hidden md:flex items-center space-x-6 ml-10">
+                <a href="index.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Home</a>
+                <a href="AboutUs.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
+                    Us</a>
+                <a href="faq.html" class="text-lg font-medium text-[#EA0264] transition-colors duration-300">FAQ</a>
+                <a href="Contactus.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Contact
+                    Us</a>
+            </div>
+
+            <!-- Action Buttons (Login, Book Demo) -->
+            <div class="hidden md:flex items-center space-x-6 ml-auto">
+                <a href="login.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Login</a>
+                <a href="Book Demo.html"
+                    class="bg-[#EA0264] text-white font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Book
+                    Demo</a>
+            </div>
+
+            <!-- Mobile menu button - hidden on desktop -->
+            <button id="mobile-menu-button"
+                class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EA0264] ml-auto">
+                <svg class="w-6 h-6 text-[#7A7A7A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Home</a>
+                <a href="AboutUs.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
+                    Us</a>
+                <a href="faq.html"
+                    class="block py-2 text-lg font-medium text-[#EA0264] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
+                <a href="Contactus.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Contact
+                    Us</a>
+                <hr class="my-3 border-gray-200">
+                <a href="login.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Login</a>
+                <a href="Book Demo.html"
+                    class="block mt-3 bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Book
+                    Demo</a>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content Area -->
     <main class="container mx-auto px-4 py-8 flex-grow">
@@ -32,53 +101,91 @@
 
                 <!-- FAQ Item 1 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
+                    <button
+                        class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
                         <h3 class="font-semibold text-lg text-[#252525]">How to Enroll?</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content px-6 pb-6 hidden">
-                        <p class="text-gray-600">Once you click the ‘Register or Enroll‘ button on our website, you fill out a short form to help us understand your child’s need. Post this, an academic counsellor is assigned, and a trial class may be provided. Once satisfied, the enrolment process begins.</p>
+                        <p class="text-gray-600">Once you click the ‘Register or Enroll‘ button on our website, you fill
+                            out a short form to help us understand your child’s need. Post this, an academic counsellor
+                            is assigned, and a trial class may be provided. Once satisfied, the enrolment process
+                            begins.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
-                        <h3 class="font-semibold text-lg text-[#252525]">What are the benefits of these math classes?</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <button
+                        class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
+                        <h3 class="font-semibold text-lg text-[#252525]">What are the benefits of these math classes?
+                        </h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content px-6 pb-6 hidden">
-                        <p class="text-gray-600">Learn Loom travels with the child parallel to their school curriculum. Along with it, we prepare them to ace in their competitive exam. The experts plan the curriculum well to utilise the stipulated time in a friendly way, and keeping the interest alive.</p>
+                        <p class="text-gray-600">Learn Loom travels with the child parallel to their school curriculum.
+                            Along with it, we prepare them to ace in their competitive exam. The experts plan the
+                            curriculum well to utilise the stipulated time in a friendly way, and keeping the interest
+                            alive.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
-                        <h3 class="font-semibold text-lg text-[#252525]">How are these classes different from the school?</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <button
+                        class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
+                        <h3 class="font-semibold text-lg text-[#252525]">How are these classes different from the
+                            school?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content px-6 pb-6 hidden">
-                        <p class="text-gray-600">The lesson plan will include projects beyond books within the module, to ensure active learning. The teachers will be using interactive math tools to keep the interest alive and make sessions more fun.</p>
+                        <p class="text-gray-600">The lesson plan will include projects beyond books within the module,
+                            to ensure active learning. The teachers will be using interactive math tools to keep the
+                            interest alive and make sessions more fun.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
-                        <h3 class="font-semibold text-lg text-[#252525]">How are assessment and progress of the child done?</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <button
+                        class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
+                        <h3 class="font-semibold text-lg text-[#252525]">How are assessment and progress of the child
+                            done?</h3>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content px-6 pb-6 hidden">
-                        <p class="text-gray-600">Assignments will be given after each class to help in the formative assessment. They are uploaded and evaluated by the teacher. Moreover the parent will be constantly updated about the learning journey of the child.</p>
+                        <p class="text-gray-600">Assignments will be given after each class to help in the formative
+                            assessment. They are uploaded and evaluated by the teacher. Moreover the parent will be
+                            constantly updated about the learning journey of the child.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
+                    <button
+                        class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
                         <h3 class="font-semibold text-lg text-[#252525]">What is the age criteria of the child?</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content px-6 pb-6 hidden">
                         <p class="text-gray-600">Currently, we are providing lessons for grade 1-10.</p>
@@ -87,9 +194,14 @@
 
                 <!-- FAQ Item 6 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <button class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
+                    <button
+                        class="faq-toggle w-full text-left p-6 flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EA0264]">
                         <h3 class="font-semibold text-lg text-[#252525]">How to take these classes?</h3>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <div class="faq-content px-6 pb-6 hidden">
                         <p class="text-gray-600">Desktop, mic and internet connectivity.</p>
@@ -100,10 +212,25 @@
 
     </main>
 
-    <!-- Simple Footer (Loaded by main.js) -->
-    <footer id="footer-placeholder"></footer>
+    <!-- Simple Footer -->
+    <footer class="bg-[#031F42] text-[#FFF] text-center p-4 mt-12">
+        <p class="text-sm text-gray-400">
+            &copy; 2026 LearnLoom. All rights reserved. | ABN: 44525014088 | Contact us:
+            <span class="whitespace-nowrap">
+                🇦🇺 +61 416 289 704 (<a href="https://wa.me/61416289704" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
+                    href="tel:+61416289704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
+            </span> |
+            <span class="whitespace-nowrap">
+                🇮🇳 +91 77158 39704 (<a href="https://wa.me/917715839704" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
+                    href="tel:+917715839704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
+            </span>
+        </p>
+    </footer>
 
     <!-- Script to load header and footer -->
     <script src="js/main.js" defer></script>
 </body>
+
 </html>
