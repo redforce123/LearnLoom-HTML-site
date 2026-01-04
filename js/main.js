@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     /**
      * Fetches HTML content from a file and injects it into a specified element.
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabButtons.forEach(btn => {
                     btn.classList.remove('text-[#EA0264]', 'border-[#EA0264]');
                     btn.classList.add('text-gray-500', 'border-transparent');
-                    
+
                     const panel = document.querySelector(btn.dataset.tabTarget);
                     if (panel) panel.classList.add('hidden');
                 });
@@ -70,16 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Activate the clicked button and show its panel
                 button.classList.add('text-[#EA0264]', 'border-[#EA0264]');
                 button.classList.remove('text-gray-500', 'border-transparent');
-                
+
                 if (targetPanel) targetPanel.classList.remove('hidden');
             });
         });
     };
 
     // Load the navbar, then initialize its mobile menu functionality.
-    loadHTML('navbar.html', 'navbar-placeholder', initializeMobileMenu);
-    // Load the footer. (Assuming you have a footer.html file)
-    loadHTML('footer.html', 'footer-placeholder');
+    if (document.getElementById('navbar-placeholder')) {
+        loadHTML('navbar.html', 'navbar-placeholder', initializeMobileMenu);
+    } else {
+        initializeMobileMenu();
+    }
+    // Footer loading removed - using static footer now
 
     // Initialize the FAQ accordion on pages that have it.
     initializeFaqAccordion();

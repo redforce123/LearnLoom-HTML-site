@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - LearnLoom</title>
-       <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
     <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Custom font for a clean, professional look */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
-      }
+        /* Custom font for a clean, professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
     </style>
 </head>
+
 <body class="bg-amber-50 text-[#252525] min-h-screen flex flex-col">
 
-    <!-- Header and Navigation Bar (Loaded by main.js) -->
-    <header id="navbar-placeholder"></header>
+    <!-- Header and Navigation Bar -->
+    <header class="bg-[#FFF] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-2 flex items-center">
+            <!-- Logo/Site Title -->
+            <a href="index.html" class="flex items-center space-x-4">
+                <img src="Images/LearnLoom_Logo.png" alt="LearnLoom Logo" class="h-14 w-auto">
+                <span class="text-3xl font-bold text-black">Learn<span class="text-[#EA0264]">Loom</span></span>
+            </a>
+
+            <!-- Main Navigation Links -->
+            <div class="hidden md:flex items-center space-x-6 ml-10">
+                <a href="index.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Home</a>
+                <a href="AboutUs.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
+                    Us</a>
+                <a href="faq.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
+                <a href="Contactus.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Contact
+                    Us</a>
+            </div>
+
+            <!-- Action Buttons (Login, Book Demo) -->
+            <div class="hidden md:flex items-center space-x-6 ml-auto">
+                <a href="login.html" class="text-lg font-medium text-[#EA0264] transition-colors duration-300">Login</a>
+                <a href="Book Demo.html"
+                    class="bg-[#EA0264] text-white font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Book
+                    Demo</a>
+            </div>
+
+            <!-- Mobile menu button - hidden on desktop -->
+            <button id="mobile-menu-button"
+                class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EA0264] ml-auto">
+                <svg class="w-6 h-6 text-[#7A7A7A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Home</a>
+                <a href="AboutUs.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
+                    Us</a>
+                <a href="faq.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
+                <a href="Contactus.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Contact
+                    Us</a>
+                <hr class="my-3 border-gray-200">
+                <a href="login.html"
+                    class="block py-2 text-lg font-medium text-[#EA0264] hover:text-[#EA0264] transition-colors duration-300">Login</a>
+                <a href="Book Demo.html"
+                    class="block mt-3 bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Book
+                    Demo</a>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content Area -->
     <main class="container mx-auto px-4 py-12 flex-grow flex flex-col items-center justify-center">
@@ -31,15 +100,31 @@
         </div>
 
         <!-- TutorBird Login Widget -->
-        <div class="w-full max-w-2xl bg-white rounded-xl shadow-lg p-4 md:p-6">
-            <script src="https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9GYnNKUSIsIldlYnNpdGVJRCI6Indic196OFBKaiIsIldlYnNpdGVCbG9ja0lEIjoid2JiX3hsYkNKVyJ9"></script>
+        <div class="w-full max-w-2xl bg-white rounded-xl shadow-lg p-4 md:p-6 min-h-[600px]">
+            <script
+                src="https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9GYnNKUSIsIldlYnNpdGVJRCI6Indic196OFBKaiIsIldlYnNpdGVCbG9ja0lEIjoid2JiX3hsYkNKVyJ9"></script>
         </div>
     </main>
 
-    <!-- Simple Footer (Loaded by main.js) -->
-    <footer id="footer-placeholder"></footer>
+    <!-- Simple Footer -->
+    <footer class="bg-[#031F42] text-[#FFF] text-center p-4 mt-12">
+        <p class="text-sm text-gray-400">
+            &copy; 2026 LearnLoom. All rights reserved. | ABN: 44525014088 | Contact us:
+            <span class="whitespace-nowrap">
+                🇦🇺 +61 416 289 704 (<a href="https://wa.me/61416289704" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
+                    href="tel:+61416289704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
+            </span> |
+            <span class="whitespace-nowrap">
+                🇮🇳 +91 77158 39704 (<a href="https://wa.me/917715839704" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
+                    href="tel:+917715839704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
+            </span>
+        </p>
+    </footer>
 
     <!-- Script to load header and footer -->
     <script src="js/main.js" defer></script>
 </body>
+
 </html>
