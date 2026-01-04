@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +8,40 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME348T0H9Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-ME348T0H9Q');
+        gtag('config', 'G-ME348T0H9Q');
     </script>
     <!-- SEO Meta Description -->
-    <meta name="description" content="Expert online tutoring in Australia. LearnLoom helps students excel in Maths, English, and Science, building confidence for NAPLAN and selective entry exams. Book your free demo!">
+    <meta name="description"
+        content="Expert online tutoring in Australia. LearnLoom helps students excel in Maths, English, and Science, building confidence for NAPLAN and selective entry exams. Book your free demo!">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
     <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Custom font for a clean, professional look */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      /* Custom scrollbar for tabs on mobile */
-      .custom-scrollbar::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Chrome, Safari and Opera */
-      }
-      .custom-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
+        /* Custom font for a clean, professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for tabs on mobile */
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
     </style>
     <!-- Google Schema Markup for SEO -->
     <script type="application/ld+json">
@@ -57,6 +65,7 @@
     }
     </script>
 </head>
+
 <body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
 
     <!-- Header and Navigation Bar -->
@@ -69,45 +78,54 @@
         <div class="flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
             <!-- Text and CTA section -->
             <div class="md:w-1/2">
-                <h1 class="text-5xl md:text-6xl font-bold text-[#EA0264] mb-4 leading-tight">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#EA0264] mb-4 leading-tight">
                     A Loom of Ideas, A World of Learning.
                 </h1>
                 <p class="text-lg text-gray-700 mb-8 max-w-xl mx-auto md:mx-0">
-                    Personalized online tutoring to build confidence and excel in your studies. We make complex concepts simple and engaging for every student.
+                    Personalized online tutoring to build confidence and excel in your studies. We make complex concepts
+                    simple and engaging for every student.
                 </p>
-                <a href="Book Demo.html" class="inline-block bg-[#EA0264] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#C90057] transition-colors duration-300">
+                <a href="Book Demo.html"
+                    class="inline-block bg-[#EA0264] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#C90057] transition-colors duration-300">
                     Book a Free Demo
                 </a>
             </div>
-            
+
             <!-- Image section -->
             <div class="md:w-1/2">
-                <img src="Images/student.png" alt="A young student smiling while engaged in an online tutoring session with LearnLoom in Australia." class="w-full h-auto object-cover">
+                <img src="Images/student.png"
+                    alt="A young student smiling while engaged in an online tutoring session with LearnLoom in Australia."
+                    class="w-full h-auto object-cover">
             </div>
         </div>
 
         <!-- Tabbed Interface Section -->
         <div class="py-16 mt-12">
             <!-- Tab Navigation -->
-            <div class="mb-8">
-                <div class="flex space-x-1 sm:space-x-4 border-b border-gray-300">
-                    <button data-tab-target="#services" class="tab-button py-2 px-4 text-lg font-semibold text-[#EA0264] border-b-2 border-[#EA0264]">
+            <div class="mb-8 overflow-x-auto custom-scrollbar pb-2 max-w-full">
+                <div class="flex space-x-4 md:space-x-8 border-b border-gray-300 min-w-max px-4">
+                    <button data-tab-target="#services"
+                        class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-[#EA0264] border-b-2 border-[#EA0264]">
                         What We Offer
                     </button>
-                    <button data-tab-target="#learnloom-method" class="tab-button py-2 px-4 text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
+                    <button data-tab-target="#learnloom-method"
+                        class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
                         LearnLoom Method
                     </button>
-                    <button data-tab-target="#enrollment" class="tab-button py-2 px-4 text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
+                    <button data-tab-target="#enrollment"
+                        class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
                         Enrollment
                     </button>
-                    <button data-tab-target="#workshops" class="tab-button py-2 px-4 text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
+                    <button data-tab-target="#workshops"
+                        class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
                         Workshops
                     </button>
-                    <button data-tab-target="#testimonials" class="tab-button py-2 px-4 text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
+                    <button data-tab-target="#testimonials"
+                        class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
                         Testimonials
                     </button>
-                    
-                    
+
+
                 </div>
             </div>
 
@@ -116,38 +134,55 @@
                 <!-- Services Panel (Visible by default) -->
                 <div id="services" class="tab-panel">
                     <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">Our Core Subjects</h2>
-                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">From core subjects to specialized exam prep, we provide the tools for success.</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#EA0264] mb-4">Our Core Subjects</h2>
+                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">From core subjects to specialized exam prep,
+                            we provide the tools for success.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <!-- Maths Card -->
-                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
-                            <div class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
-                                <img src="Images/Maths.jpg" alt="A vibrant image representing mathematics tutoring for NAPLAN and selective entry exams." class="w-full h-full object-cover">
+                        <div
+                            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+                            <div
+                                class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
+                                <img src="Images/Maths.jpg"
+                                    alt="A vibrant image representing mathematics tutoring for NAPLAN and selective entry exams."
+                                    class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Maths</h3>
                             <p class="text-gray-600">NAPLAN, Selective Entry, and High School Calculus.</p>
                         </div>
                         <!-- English Card -->
-                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
-                            <div class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
-                                <img src="Images/English.jpg" alt="An open book representing LearnLoom's English tutoring for reading comprehension and essay writing in Australia." class="w-full h-full object-cover">
+                        <div
+                            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+                            <div
+                                class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
+                                <img src="Images/English.jpg"
+                                    alt="An open book representing LearnLoom's English tutoring for reading comprehension and essay writing in Australia."
+                                    class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">English</h3>
                             <p class="text-gray-600">Essay Writing, Reading Comprehension, and Grammar.</p>
                         </div>
                         <!-- Science Card -->
-                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
-                            <div class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
-                                <img src="Images/Science.jpg" alt="A microscope and beakers symbolizing hands-on science tutoring for students in Australia." class="w-full h-full object-cover">
+                        <div
+                            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+                            <div
+                                class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
+                                <img src="Images/Science.jpg"
+                                    alt="A microscope and beakers symbolizing hands-on science tutoring for students in Australia."
+                                    class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Science</h3>
                             <p class="text-gray-600">Covering Physics, Chemistry, and Biology concepts.</p>
                         </div>
                         <!-- Vacation Classes Card -->
-                        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
-                            <div class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
-                                <img src="Images/Vacation.png" alt="A teacher taking an engaging vacation classes and skill workshops at LearnLoom in Australia." class="w-full h-full object-cover">
+                        <div
+                            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
+                            <div
+                                class="mx-auto flex items-center justify-center h-32 w-32 rounded-lg bg-pink-100 mb-6 overflow-hidden">
+                                <img src="Images/Vacation.png"
+                                    alt="A teacher taking an engaging vacation classes and skill workshops at LearnLoom in Australia."
+                                    class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Vacation Classes</h3>
                             <p class="text-gray-600">Skill workshops and creative project courses.</p>
@@ -158,8 +193,10 @@
                 <!-- Enrollment Process Panel (Hidden by default) -->
                 <div id="enrollment" class="tab-panel hidden">
                     <div class="text-center">
-                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">The Enrollment Process: A Step-by-Step Guide</h2>
-                        <p class="text-lg text-gray-700 max-w-3xl mx-auto">Follow our simple four-step process to get your child started on their learning journey with us.</p>
+                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">The Enrollment Process: A Step-by-Step Guide
+                        </h2>
+                        <p class="text-lg text-gray-700 max-w-3xl mx-auto">Follow our simple four-step process to get
+                            your child started on their learning journey with us.</p>
                     </div>
 
                     <!-- Steps Container -->
@@ -167,45 +204,69 @@
 
                         <!-- Step 1 -->
                         <div class="flex-1 flex flex-col items-center text-center">
-                            <div class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">1</div>
+                            <div
+                                class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">
+                                1</div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 1: Book a Demo</h3>
-                            <p class="text-gray-600 px-2">Navigate to the 'Book Demo' section and fill in the form. This helps us tailor the live demonstration to your child's needs.</p>
+                            <p class="text-gray-600 px-2">Navigate to the 'Book Demo' section and fill in the form. This
+                                helps us tailor the live demonstration to your child's needs.</p>
                         </div>
 
                         <!-- Connector -->
                         <div class="hidden lg:flex items-center h-20 text-gray-300">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
                         </div>
 
                         <!-- Step 2 -->
                         <div class="flex-1 flex flex-col items-center text-center">
-                            <div class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">2</div>
+                            <div
+                                class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">
+                                2</div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 2: Attend the Demo</h3>
-                            <p class="text-gray-600 px-2">Join the scheduled session to experience our interactive teaching style and see how our curriculum works firsthand.</p>
+                            <p class="text-gray-600 px-2">Join the scheduled session to experience our interactive
+                                teaching style and see how our curriculum works firsthand.</p>
                         </div>
 
                         <!-- Connector -->
                         <div class="hidden lg:flex items-center h-20 text-gray-300">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
                         </div>
 
                         <!-- Step 3 -->
                         <div class="flex-1 flex flex-col items-center text-center">
-                            <div class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">3</div>
+                            <div
+                                class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">
+                                3</div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 3: Meet a Coordinator</h3>
-                            <p class="text-gray-600 px-2">After the demo, a coordinator will recommend classes and discuss payment plans based on the student's performance.</p>
+                            <p class="text-gray-600 px-2">After the demo, a coordinator will recommend classes and
+                                discuss payment plans based on the student's performance.</p>
                         </div>
 
                         <!-- Connector -->
                         <div class="hidden lg:flex items-center h-20 text-gray-300">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
                         </div>
 
                         <!-- Step 4 -->
                         <div class="flex-1 flex flex-col items-center text-center">
-                            <div class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">4</div>
+                            <div
+                                class="flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-[#EA0264] text-4xl font-bold mb-4">
+                                4</div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Step 4: Finalize Enrollment</h3>
-                            <p class="text-gray-600 px-2">Once you're satisfied with the plan, we'll complete the enrollment, and the student can officially begin their classes.</p>
+                            <p class="text-gray-600 px-2">Once you're satisfied with the plan, we'll complete the
+                                enrollment, and the student can officially begin their classes.</p>
                         </div>
 
                     </div>
@@ -214,24 +275,31 @@
                 <!-- LearnLoom Method Panel (Hidden by default) -->
                 <div id="learnloom-method" class="tab-panel hidden">
                     <div class="text-center">
-                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">The LearnLoom Method: Our Three-C Approach</h2>
-                        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">At Learn<span class="text-[#EA0264] font-semibold">Loom</span>, we use the "Three Cs" to guide our teaching and help students succeed.</p>
+                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">The LearnLoom Method: Our Three-C Approach
+                        </h2>
+                        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">At Learn<span
+                                class="text-[#EA0264] font-semibold">Loom</span>, we use the "Three Cs" to guide our
+                            teaching and help students succeed.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                         <!-- Concept Clarity -->
                         <div class="bg-white p-8 rounded-xl shadow-lg">
                             <h3 class="text-2xl font-bold text-gray-900 mb-3">Concept Clarity</h3>
-                            <p class="text-gray-600">We visualize and connect new ideas to a child's everyday life, ensuring they understand concepts easily and deeply.</p>
+                            <p class="text-gray-600">We visualize and connect new ideas to a child's everyday life,
+                                ensuring they understand concepts easily and deeply.</p>
                         </div>
                         <!-- Confidence First -->
                         <div class="bg-white p-8 rounded-xl shadow-lg">
                             <h3 class="text-2xl font-bold text-gray-900 mb-3">Confidence First</h3>
-                            <p class="text-gray-600">We provide consistent encouragement and celebrate every success, big or small, to build a strong sense of self-belief in every student.</p>
+                            <p class="text-gray-600">We provide consistent encouragement and celebrate every success,
+                                big or small, to build a strong sense of self-belief in every student.</p>
                         </div>
                         <!-- Creative Thinking -->
                         <div class="bg-white p-8 rounded-xl shadow-lg">
                             <h3 class="text-2xl font-bold text-gray-900 mb-3">Creative Thinking</h3>
-                            <p class="text-gray-600">We encourage kids to think outside the box and solve problems in new ways. Our goal isn't just to teach them, but to inspire them to think creatively.</p>
+                            <p class="text-gray-600">We encourage kids to think outside the box and solve problems in
+                                new ways. Our goal isn't just to teach them, but to inspire them to think creatively.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -240,29 +308,38 @@
                 <div id="workshops" class="tab-panel hidden">
                     <div class="text-center mb-12">
                         <h2 class="text-4xl font-bold text-[#EA0264] mb-4">Workshops</h2>
-                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join our special workshops to boost your skills and explore new topics. Seats are limited!</p>
+                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join our special workshops to boost your
+                            skills and explore new topics. Seats are limited!</p>
                     </div>
 
                     <!-- Workshop Sub-navigation -->
                     <div class="flex justify-center space-x-4 mb-10">
-                        <button data-workshop-tab-target="#upcoming-workshops" class="workshop-tab-button py-2 px-6 font-semibold text-white bg-[#EA0264] rounded-full transition-colors duration-300">Upcoming</button>
-                        <button data-workshop-tab-target="#past-workshops" class="workshop-tab-button py-2 px-6 font-semibold text-gray-600 bg-gray-200 rounded-full transition-colors duration-300">Past</button>
+                        <button data-workshop-tab-target="#upcoming-workshops"
+                            class="workshop-tab-button py-2 px-6 font-semibold text-white bg-[#EA0264] rounded-full transition-colors duration-300">Upcoming</button>
+                        <button data-workshop-tab-target="#past-workshops"
+                            class="workshop-tab-button py-2 px-6 font-semibold text-gray-600 bg-gray-200 rounded-full transition-colors duration-300">Past</button>
                     </div>
 
                     <!-- Upcoming Workshops Panel -->
                     <div id="upcoming-workshops" class="workshop-tab-panel">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <!-- Workshop Card 1 -->
-                           
+
                             <!-- Workshop Card 3 -->
                             <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
                                 <div class="overflow-hidden">
-                                    <img src="Images/workshops/FlashFiction_Challenge.jpg" alt="Poster for free online event Childrens workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                    <img src="Images/workshops/FlashFiction_Challenge.jpg"
+                                        alt="Poster for free online event Childrens workshop"
+                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
                                 </div>
                                 <div class="p-6 flex-grow flex flex-col">
                                     <h3 class="text-xl font-bold text-gray-900 mb-2">Flash Fiction Challenge</h3>
-                                    <p class="text-gray-600 mb-4 flex-grow">A great time to earn a reward for your written thoughts. Dive into stories, games, and art.</p>
-                                    <button data-modal-target="#form-modal" data-form-url="https://forms.gle/ktQPHN8Jz5SKapyk6" class="register-modal-button mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register Now</button>
+                                    <p class="text-gray-600 mb-4 flex-grow">A great time to earn a reward for your
+                                        written thoughts. Dive into stories, games, and art.</p>
+                                    <button data-modal-target="#form-modal"
+                                        data-form-url="https://forms.gle/ktQPHN8Jz5SKapyk6"
+                                        class="register-modal-button mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register
+                                        Now</button>
                                 </div>
                             </div>
                         </div>
@@ -273,18 +350,29 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <!-- Past Workshop Poster 1 -->
                             <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                                <img src="Images/workshops/OzoneDayWorkshop.jpeg" alt="Poster for past Ozone Day Workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="p-4"><h3 class="text-lg font-bold text-gray-900 text-center">Ozone Day Workshop</h3></div>
+                                <img src="Images/workshops/OzoneDayWorkshop.jpeg"
+                                    alt="Poster for past Ozone Day Workshop"
+                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-bold text-gray-900 text-center">Ozone Day Workshop</h3>
+                                </div>
                             </div>
                             <!-- Past Workshop Poster 2 -->
                             <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                                <img src="Images/workshops/FathersDayWorkshop.jpeg" alt="Poster for past Father's Day Workshop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="p-4"><h3 class="text-lg font-bold text-gray-900 text-center">Father's Day Workshop</h3></div>
+                                <img src="Images/workshops/FathersDayWorkshop.jpeg"
+                                    alt="Poster for past Father's Day Workshop"
+                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-bold text-gray-900 text-center">Father's Day Workshop</h3>
+                                </div>
                             </div>
                             <!-- Past Workshop Poster 3 -->
                             <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                                <img src="Images/workshops/ChildrensDayWorkshop.jpeg" alt="Olympiad" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="p-4"><h3 class="text-lg font-bold text-gray-900 text-center">Childrens Day Workshops</h3></div>
+                                <img src="Images/workshops/ChildrensDayWorkshop.jpeg" alt="Olympiad"
+                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-bold text-gray-900 text-center">Childrens Day Workshops</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -294,21 +382,27 @@
                 <div id="testimonials" class="tab-panel hidden">
                     <div class="text-center">
                         <h2 class="text-4xl font-bold text-[#EA0264] mb-4">What Our Students Say</h2>
-                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Real stories from students who have grown with us.</p>
+                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Real stories from students who have grown
+                            with us.</p>
                         <div class="mt-8 grid gap-8 grid-cols-1 lg:grid-cols-3 text-left">
                             <!-- Testimonial 1 -->
                             <div class="p-8 bg-white rounded-xl shadow-lg">
-                                <p class="text-gray-600 italic">"The teachers made learning fun, so I am able to prepare for competitive exams. They have a vast collection of old question papers which helped me get a good score."</p>
+                                <p class="text-gray-600 italic">"The teachers made learning fun, so I am able to prepare
+                                    for competitive exams. They have a vast collection of old question papers which
+                                    helped me get a good score."</p>
                                 <p class="mt-4 font-semibold text-gray-800">- Dhruv, Grade 7</p>
                             </div>
                             <!-- Testimonial 2 -->
                             <div class="p-8 bg-white rounded-xl shadow-lg">
-                                <p class="text-gray-600 italic">"English learning is fun! I was able to think outside the box and improve my vocabulary."</p>
+                                <p class="text-gray-600 italic">"English learning is fun! I was able to think outside
+                                    the box and improve my vocabulary."</p>
                                 <p class="mt-4 font-semibold text-gray-800">- Ivanka, Grade 2</p>
                             </div>
                             <!-- Testimonial 3 -->
                             <div class="p-8 bg-white rounded-xl shadow-lg">
-                                <p class="text-gray-600 italic">"The teachers had all the books from what is taught in school. They gave me games to play and helped me choose videos to watch, which made things easy to understand."</p>
+                                <p class="text-gray-600 italic">"The teachers had all the books from what is taught in
+                                    school. They gave me games to play and helped me choose videos to watch, which made
+                                    things easy to understand."</p>
                                 <p class="mt-4 font-semibold text-gray-800">- Raphael, Grade 3</p>
                             </div>
                         </div>
@@ -323,9 +417,12 @@
     <footer id="footer-placeholder"></footer>
 
     <!-- Messenger Chat Button -->
-    <a href="https://m.me/720925057767597" target="_blank" rel="noopener noreferrer" title="Chat on Messenger" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-110">
+    <a href="https://m.me/720925057767597" target="_blank" rel="noopener noreferrer" title="Chat on Messenger"
+        class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.493 1.825 6.594 4.574 8.544V24l3.334-1.933a13.23 13.23 0 004.092.622C18.627 22.789 24 17.815 24 11.678 24 5.54 18.627 0 12 0zM7.79 15.694l-2.58-2.58-5.437 2.58L6.857 8.61l2.58 2.58 5.437-2.58-7.084 7.084z" transform="translate(2.5 -0.5) scale(0.9)"/>
+            <path
+                d="M12 0C5.373 0 0 4.974 0 11.111c0 3.493 1.825 6.594 4.574 8.544V24l3.334-1.933a13.23 13.23 0 004.092.622C18.627 22.789 24 17.815 24 11.678 24 5.54 18.627 0 12 0zM7.79 15.694l-2.58-2.58-5.437 2.58L6.857 8.61l2.58 2.58 5.437-2.58-7.084 7.084z"
+                transform="translate(2.5 -0.5) scale(0.9)" />
         </svg>
         <span class="sr-only">Chat on Messenger</span>
     </a>
@@ -335,7 +432,8 @@
         <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl h-full max-h-[90vh] flex flex-col">
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 class="text-xl font-semibold text-gray-800">Register for Workshop</h3>
-                <button id="close-modal-button" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+                <button id="close-modal-button"
+                    class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
             </div>
             <div class="p-2 flex-grow">
                 <iframe id="form-iframe" class="w-full h-full border-0" src="" title="Registration Form">
@@ -399,4 +497,5 @@
         });
     </script>
 </body>
+
 </html>
