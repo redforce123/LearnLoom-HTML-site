@@ -27,7 +27,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -37,6 +37,7 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '886550633716318');
         fbq('track', 'PageView');
+        fbq('track', 'Contact');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=886550633716318&ev=PageView&noscript=1" /></noscript>
@@ -140,6 +141,8 @@
                     class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
                     href="tel:+917715839704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
             </span>
+            <br><br>
+            <a href="PrivacyPolicy.html" class="text-gray-400 hover:text-white underline text-xs">Privacy Policy</a>
         </p>
     </footer>
 
