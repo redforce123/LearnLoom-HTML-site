@@ -108,6 +108,8 @@
                 <a href="AboutUs.html"
                     class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
                     Us</a>
+                <a href="workshop.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Workshop</a>
                 <!-- <a href="blogs.html" class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Blog</a> -->
                 <a href="faq.html"
                     class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
@@ -144,6 +146,8 @@
                 <a href="AboutUs.html"
                     class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
                     Us</a>
+                <a href="workshop.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Workshop</a>
                 <a href="faq.html"
                     class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
                 <a href="Contactus.html"
@@ -195,10 +199,6 @@
                     <button data-tab-target="#services"
                         class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-[#EA0264] border-b-2 border-[#EA0264]">
                         What We Offer
-                    </button>
-                    <button data-tab-target="#workshops"
-                        class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
-                        Workshops
                     </button>
                     <button data-tab-target="#enrollment"
                         class="tab-button whitespace-nowrap py-2 px-3 md:px-4 text-base md:text-lg font-semibold text-gray-500 border-b-2 border-transparent hover:text-[#EA0264]">
@@ -392,79 +392,7 @@
                     </div>
                 </div>
 
-                <!-- Workshops Panel (Hidden by default) -->
-                <div id="workshops" class="tab-panel hidden">
-                    <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-[#EA0264] mb-4">Workshops</h2>
-                        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join our special workshops to boost your
-                            skills and explore new topics. Seats are limited!</p>
-                    </div>
-
-                    <!-- Workshop Sub-navigation -->
-                    <div class="flex justify-center space-x-4 mb-10">
-                        <button data-workshop-tab-target="#upcoming-workshops"
-                            class="workshop-tab-button py-2 px-6 font-semibold text-white bg-[#EA0264] rounded-full transition-colors duration-300">Upcoming</button>
-                        <button data-workshop-tab-target="#past-workshops"
-                            class="workshop-tab-button py-2 px-6 font-semibold text-gray-600 bg-gray-200 rounded-full transition-colors duration-300">Past</button>
-                    </div>
-
-                    <!-- Upcoming Workshops Panel -->
-                    <div id="upcoming-workshops" class="workshop-tab-panel">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <!-- Workshop Card 1 -->
-
-                            <!-- Workshop Card 3 -->
-                            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                                <div class="overflow-hidden">
-                                    <img src="Images/workshops/FlashFiction_Challenge.jpg"
-                                        alt="Poster for free online event Childrens workshop"
-                                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col">
-                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Flash Fiction Challenge</h3>
-                                    <p class="text-gray-600 mb-4 flex-grow">A great time to earn a reward for your
-                                        written thoughts. Dive into stories, games, and art.</p>
-                                    <button data-modal-target="#form-modal"
-                                        data-form-url="https://forms.gle/ktQPHN8Jz5SKapyk6"
-                                        class="register-modal-button mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register
-                                        Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Past Workshops Panel (Hidden by default) -->
-                    <div id="past-workshops" class="workshop-tab-panel hidden">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <!-- Past Workshop Poster 1 -->
-                            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                                <img src="Images/workshops/OzoneDayWorkshop.jpeg"
-                                    alt="Poster for past Ozone Day Workshop"
-                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-bold text-gray-900 text-center">Ozone Day Workshop</h3>
-                                </div>
-                            </div>
-                            <!-- Past Workshop Poster 2 -->
-                            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                                <img src="Images/workshops/FathersDayWorkshop.jpeg"
-                                    alt="Poster for past Father's Day Workshop"
-                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-bold text-gray-900 text-center">Father's Day Workshop</h3>
-                                </div>
-                            </div>
-                            <!-- Past Workshop Poster 3 -->
-                            <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                                <img src="Images/workshops/ChildrensDayWorkshop.jpeg" alt="Olympiad"
-                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
-                                <div class="p-4">
-                                    <h3 class="text-lg font-bold text-gray-900 text-center">Childrens Day Workshops</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Workshops Panel - Removed from tabs, now standalone section -->
 
                 <!-- Testimonials Panel (Hidden by default) -->
                 <div id="testimonials" class="tab-panel hidden">
@@ -498,6 +426,8 @@
                 </div>
             </div>
         </div>
+
+
 
     </main>
 

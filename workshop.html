@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="sj0hnvhnlorgcjkfx08p21smhyhuuy" />
+    <title>Workshops - LearnLoom</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME348T0H9Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ME348T0H9Q');
+    </script>
+    <!-- SEO Meta Description -->
+    <meta name="description"
+        content="Join LearnLoom's special workshops to boost your skills and explore new topics. Register for upcoming workshops or view our past events.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/LearnLoom_Logo.png">
+    <link rel="apple-touch-icon" href="Images/LearnLoom_Logo.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean, professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '886550633716318');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=886550633716318&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-[#FFF] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-2 flex items-center">
+            <!-- Logo/Site Title -->
+            <a href="index.html" class="flex items-center space-x-4">
+                <img src="Images/LearnLoom_Logo.png" alt="LearnLoom Logo" class="h-14 w-auto">
+                <span class="text-3xl font-bold text-black">Learn<span class="text-[#EA0264]">Loom</span></span>
+            </a>
+
+            <!-- Main Navigation Links -->
+            <div class="hidden md:flex items-center space-x-6 ml-10">
+                <a href="index.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Home</a>
+                <a href="AboutUs.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
+                    Us</a>
+                <a href="workshop.html"
+                    class="text-lg font-medium text-[#EA0264] transition-colors duration-300">Workshop</a>
+                <!-- <a href="blogs.html" class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Blog</a> -->
+                <a href="faq.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
+                <a href="Contactus.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Contact
+                    Us</a>
+            </div>
+
+            <!-- Action Buttons (Login, Book Demo) -->
+            <div class="hidden md:flex items-center space-x-6 ml-auto">
+                <a href="login.html"
+                    class="text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Login</a>
+                <a href="Book Demo.html"
+                    class="bg-[#EA0264] text-white font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Book
+                    Demo</a>
+            </div>
+
+            <!-- Mobile menu button - hidden on desktop -->
+            <button id="mobile-menu-button"
+                class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EA0264] ml-auto">
+                <svg class="w-6 h-6 text-[#7A7A7A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Home</a>
+                <a href="AboutUs.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">About
+                    Us</a>
+                <a href="workshop.html"
+                    class="block py-2 text-lg font-medium text-[#EA0264] transition-colors duration-300">Workshop</a>
+                <a href="faq.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">FAQ</a>
+                <a href="Contactus.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Contact
+                    Us</a>
+                <hr class="my-3 border-gray-200">
+                <a href="login.html"
+                    class="block py-2 text-lg font-medium text-[#7A7A7A] hover:text-[#EA0264] transition-colors duration-300">Login</a>
+                <a href="Book Demo.html"
+                    class="block mt-3 bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Book
+                    Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+
+        <!-- Workshops Section -->
+        <div class="py-16">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-[#EA0264] mb-4">Workshops</h1>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Join our special workshops to boost your
+                    skills and explore new topics. Seats are limited!</p>
+            </div>
+
+            <!-- Workshop Sub-navigation -->
+            <div class="flex justify-center space-x-4 mb-10">
+                <button data-workshop-tab-target="#upcoming-workshops"
+                    class="workshop-tab-button py-2 px-6 font-semibold text-white bg-[#EA0264] rounded-full transition-colors duration-300">Upcoming</button>
+                <button data-workshop-tab-target="#past-workshops"
+                    class="workshop-tab-button py-2 px-6 font-semibold text-gray-600 bg-gray-200 rounded-full transition-colors duration-300">Past</button>
+            </div>
+
+            <!-- Upcoming Workshops Panel -->
+            <div id="upcoming-workshops" class="workshop-tab-panel">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Workshop Card 1 -->
+
+                    <!-- Workshop Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
+                        <div class="overflow-hidden">
+                            <img src="Images/workshops/ParentWorkshop_2026.jpeg"
+                                alt="Poster for LearnLoom Parent Workshop 2026 - Free online event for parents"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-end">
+                            <button data-modal-target="#form-modal"
+                                class="register-modal-button mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Workshops Panel (Hidden by default) -->
+            <div id="past-workshops" class="workshop-tab-panel hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Past Workshop Poster 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img src="Images/workshops/OzoneDayWorkshop.jpeg" alt="Poster for past Ozone Day Workshop"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-900 text-center">Ozone Day Workshop</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img src="Images/workshops/FathersDayWorkshop.jpeg" alt="Poster for past Father's Day Workshop"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-900 text-center">Father's Day Workshop</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img src="Images/workshops/ChildrensDayWorkshop.jpeg" alt="Olympiad"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-900 text-center">Childrens Day Workshops</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="bg-[#031F42] text-[#FFF] text-center p-4 mt-12">
+        <p class="text-sm text-gray-400">
+            &copy; 2026 LearnLoom. All rights reserved. | ABN: 44525014088 | Contact us:
+            <span class="whitespace-nowrap">
+                🇦🇺 +61 416 289 704 (<a href="https://wa.me/61416289704" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
+                    href="tel:+61416289704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
+            </span> |
+            <span class="whitespace-nowrap">
+                🇮🇳 +91 77158 39704 (<a href="https://wa.me/917715839704" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors duration-300 underline">Chat</a> / <a
+                    href="tel:+917715839704" class="hover:text-white transition-colors duration-300 underline">Call</a>)
+            </span>
+            <br><br>
+            <a href="PrivacyPolicy.html" class="text-gray-400 hover:text-white underline text-xs">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- Messenger Chat Button -->
+    <a href="https://m.me/720925057767597" target="_blank" rel="noopener noreferrer" title="Chat on Messenger"
+        class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M12 0C5.373 0 0 4.974 0 11.111c0 3.493 1.825 6.594 4.574 8.544V24l3.334-1.933a13.23 13.23 0 004.092.622C18.627 22.789 24 17.815 24 11.678 24 5.54 18.627 0 12 0zM7.79 15.694l-2.58-2.58-5.437 2.58L6.857 8.61l2.58 2.58 5.437-2.58-7.084 7.084z"
+                transform="translate(2.5 -0.5) scale(0.9)" />
+        </svg>
+        <span class="sr-only">Chat on Messenger</span>
+    </a>
+
+    <!-- Form Modal with Fillout Embed -->
+    <div id="form-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl h-full max-h-[90vh] flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-semibold text-gray-800">Register for Workshop</h3>
+                <button id="close-modal-button"
+                    class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-4 flex-grow overflow-auto">
+                <div style="width:100%;height:500px;" data-fillout-id="c4QifFpxrmus" data-fillout-embed-type="standard"
+                    data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fillout Form Script -->
+    <script src="https://server.fillout.com/embed/v1/"></script>
+
+    <!-- Script to load header and footer -->
+    <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const workshopTabButtons = document.querySelectorAll('.workshop-tab-button');
+            const workshopTabPanels = document.querySelectorAll('.workshop-tab-panel');
+
+            workshopTabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all buttons
+                    workshopTabButtons.forEach(btn => {
+                        btn.classList.remove('bg-[#EA0264]', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-600');
+                    });
+                    // Activate the clicked button
+                    button.classList.add('bg-[#EA0264]', 'text-white');
+                    button.classList.remove('bg-gray-200', 'text-gray-600');
+
+                    // Hide all panels
+                    workshopTabPanels.forEach(panel => panel.classList.add('hidden'));
+                    // Show the target panel
+                    const targetPanel = document.querySelector(button.dataset.workshopTabTarget);
+                    if (targetPanel) targetPanel.classList.remove('hidden');
+                });
+            });
+
+            // Modal Logic
+            const modal = document.getElementById('form-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const registerButtons = document.querySelectorAll('.register-modal-button');
+
+            registerButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            };
+
+            closeModalButton.addEventListener('click', closeModal);
+        });
+    </script>
+</body>
+
+</html>
