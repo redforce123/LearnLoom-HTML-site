@@ -276,6 +276,13 @@
                             <p class="text-gray-600">Skill workshops and creative project courses.</p>
                         </div>
                     </div>
+
+                    <!-- Subscribe Button -->
+                    <div class="text-center mt-12">
+                        <button id="subscribe-button"
+                            class="inline-block bg-[#EA0264] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#C90057] transition-colors duration-300">Subscribe
+                            to our Newsletter</button>
+                    </div>
                 </div>
 
                 <!-- Enrollment Process Panel (Hidden by default) -->
@@ -478,6 +485,25 @@
         </div>
     </div>
 
+    <!-- Subscription Modal with Fillout Embed -->
+    <div id="subscription-modal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl h-full max-h-[90vh] flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-semibold text-gray-800">Subscribe to LearnLoom</h3>
+                <button id="close-subscription-modal"
+                    class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-4 flex-grow overflow-auto">
+                <div style="width:100%;height:500px;" data-fillout-id="i9Uv284VDgus" data-fillout-embed-type="standard"
+                    data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Fillout Form Script -->
+    <script src="https://server.fillout.com/embed/v1/"></script>
 
     <!-- Script to load header and footer -->
     <script src="js/main.js" defer></script>
@@ -529,6 +555,25 @@
             };
 
             closeModalButton.addEventListener('click', closeModal);
+
+            // Subscription Modal Logic
+            const subscriptionModal = document.getElementById('subscription-modal');
+            const subscribeButton = document.getElementById('subscribe-button');
+            const closeSubscriptionModal = document.getElementById('close-subscription-modal');
+
+            if (subscribeButton) {
+                subscribeButton.addEventListener('click', () => {
+                    subscriptionModal.classList.remove('hidden');
+                    subscriptionModal.classList.add('flex');
+                });
+            }
+
+            if (closeSubscriptionModal) {
+                closeSubscriptionModal.addEventListener('click', () => {
+                    subscriptionModal.classList.add('hidden');
+                    subscriptionModal.classList.remove('flex');
+                });
+            }
         });
     </script>
 </body>
