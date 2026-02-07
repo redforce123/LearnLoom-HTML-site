@@ -34,6 +34,39 @@
         html {
             overflow-y: scroll;
         }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 100%;
+            /* Mobile default */
+        }
+
+        @media (min-width: 768px) {
+            .carousel-item {
+                width: calc((100% - 2rem) / 2);
+                /* 2 items with 1 gap */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-item {
+                width: calc((100% - 4rem) / 3);
+                /* 3 items with 2 gaps */
+            }
+        }
     </style>
     <!-- Meta Pixel Code -->
     <script>
@@ -153,28 +186,43 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Workshop Card 1 -->
 
-                    <!-- Workshop Card 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                        <div class="overflow-hidden">
-                            <img src="Images/workshops/ParentWorkshop_2026.webp"
-                                alt="Poster for LearnLoom Parent Workshop 2026 - Free online event for parents"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-end">
-                            <button data-modal-target="#form-modal"
-                                class="register-modal-button mt-auto inline-block bg-[#EA0264] text-white text-center font-semibold py-2 px-6 rounded-full hover:bg-[#C90057] transition-colors duration-300">Register
-                                Now</button>
-                        </div>
-                    </div>
+                    <!-- No upcoming workshops at the moment -->
                 </div>
             </div>
 
             <!-- Past Workshops Panel (Hidden by default) -->
-            <div id="past-workshops" class="workshop-tab-panel hidden">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="past-workshops" class="workshop-tab-panel hidden relative group">
+                <!-- Navigation Buttons -->
+                <button id="prevBtn"
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 -ml-4 lg:-ml-12 bg-white text-[#EA0264] p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 transition-colors duration-300 focus:outline-none hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn"
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 -mr-4 lg:-mr-12 bg-white text-[#EA0264] p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 transition-colors duration-300 focus:outline-none hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Carousel Container -->
+                <div id="carousel-scroll-container"
+                    class="flex overflow-x-auto scrollbar-hide space-x-8 pb-4 scroll-smooth">
+                    <!-- Past Workshop Poster (Moved) -->
+                    <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <img src="Images/workshops/ParentWorkshop_2026.webp"
+                            alt="Poster for LearnLoom Parent Workshop 2026 - Free online event for parents"
+                            class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-900 text-center">Parent Workshop 2026</h3>
+                        </div>
+                    </div>
                     <!-- Past Workshop Poster 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img src="Images/workshops/OzoneDayWorkshop.webp" alt="Poster for past Ozone Day Workshop"
                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                             loading="lazy">
@@ -183,7 +231,7 @@
                         </div>
                     </div>
                     <!-- Past Workshop Poster 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img src="Images/workshops/FathersDayWorkshop.webp" alt="Poster for past Father's Day Workshop"
                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                             loading="lazy">
@@ -192,7 +240,7 @@
                         </div>
                     </div>
                     <!-- Past Workshop Poster 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                    <div class="carousel-item bg-white rounded-xl shadow-lg overflow-hidden group">
                         <img src="Images/workshops/ChildrensDayWorkshop.webp"
                             alt="Poster for past Childrens Day Workshop"
                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
@@ -299,6 +347,68 @@
             };
 
             closeModalButton.addEventListener('click', closeModal);
+
+            // Carousel Logic
+            const carouselContainer = document.getElementById('carousel-scroll-container');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let autoScrollInterval;
+
+            const scrollAmount = () => {
+                // Determine scroll amount based on item width + gap
+                // We can approximate by getting the width of the first item + gap (32px = 2rem)
+                const item = carouselContainer.querySelector('.carousel-item');
+                return item ? item.offsetWidth + 32 : 300;
+            };
+
+            const scrollNext = () => {
+                if (carouselContainer.scrollLeft + carouselContainer.clientWidth >= carouselContainer.scrollWidth - 10) {
+                    // Check if at the end, if so, loop back to start (smoothly or instantly)
+                    // For infinite loop effect, we might need a more complex setup, 
+                    // but for now, let's just scroll back to start
+                    carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carouselContainer.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                }
+            };
+
+            const scrollPrev = () => {
+                if (carouselContainer.scrollLeft <= 0) {
+                    // Scroll to end
+                    carouselContainer.scrollTo({ left: carouselContainer.scrollWidth, behavior: 'smooth' });
+                } else {
+                    carouselContainer.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+                }
+            };
+
+            nextBtn.addEventListener('click', () => {
+                stopAutoScroll();
+                scrollNext();
+                startAutoScroll();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopAutoScroll();
+                scrollPrev();
+                startAutoScroll();
+            });
+
+            const startAutoScroll = () => {
+                stopAutoScroll(); // Ensure no duplicate intervals
+                autoScrollInterval = setInterval(scrollNext, 4000); // Scroll every 4 seconds
+            };
+
+            const stopAutoScroll = () => {
+                clearInterval(autoScrollInterval);
+            };
+
+            // Start auto scrolling initially
+            startAutoScroll();
+
+            // Pause on hover
+            carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+            carouselContainer.addEventListener('mouseleave', startAutoScroll);
+
         });
     </script>
 </body>
