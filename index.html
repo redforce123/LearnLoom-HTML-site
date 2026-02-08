@@ -25,7 +25,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom font for a clean, professional look */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@4000;600;700&display=swap');
 
         body {
             font-family: 'Inter', sans-serif;
@@ -46,6 +46,19 @@
             /* IE and Edge */
             scrollbar-width: none;
             /* Firefox */
+        }
+
+        .typewriter-text {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(to right, #EA0264, #A80148);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            font-size: 1.1rem;
+            /* Slightly larger for clarity */
+            letter-spacing: 0.05em;
+            /* Add some spacing for readability */
         }
     </style>
     <!-- Google Schema Markup for SEO -->
@@ -181,6 +194,17 @@
                     class="inline-block bg-[#EA0264] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#C90057] transition-colors duration-300">
                     Book a Free Demo
                 </a>
+
+                <!-- News Ticker (Integrated) -->
+                <div class="mt-8 relative w-full flex items-center justify-center md:justify-start">
+                    <div class="relative w-full min-h-[3rem] md:min-h-[2rem]">
+                        <span id="news-typewriter"
+                            class="typewriter-text font-bold text-sm md:text-base block md:inline-block leading-normal"
+                            aria-live="polite"></span>
+                        <!-- Hidden container for SEO -->
+                        <div id="seo-news-content" class="sr-only"></div>
+                    </div>
+                </div>
             </div>
 
             <!-- Image section -->
@@ -190,6 +214,8 @@
                     class="w-full h-auto object-cover" width="600" height="400">
             </div>
         </div>
+
+        <!-- News Ticker Section Removed -->
 
         <!-- Tabbed Interface Section -->
         <div class="py-16 mt-12">
@@ -509,52 +535,65 @@
     <script src="js/main.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const workshopTabButtons = document.querySelectorAll('.workshop-tab-button');
-            const workshopTabPanels = document.querySelectorAll('.workshop-tab-panel');
+            // Existing Tab Logic
+            const workshopTabButtons = document.querySelectorAll('.tab-button'); // Corrected selector based on existing code
+            const workshopTabPanels = document.querySelectorAll('.tab-panel');
 
-            workshopTabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Deactivate all buttons
-                    workshopTabButtons.forEach(btn => {
-                        btn.classList.remove('bg-[#EA0264]', 'text-white');
-                        btn.classList.add('bg-gray-200', 'text-gray-600');
+            if (workshopTabButtons.length > 0) {
+                workshopTabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Deactivate all buttons
+                        workshopTabButtons.forEach(btn => {
+                            btn.classList.remove('text-[#EA0264]', 'border-[#EA0264]');
+                            btn.classList.add('text-gray-500', 'border-transparent');
+                        });
+                        // Activate the clicked button
+                        button.classList.add('text-[#EA0264]', 'border-[#EA0264]');
+                        button.classList.remove('text-gray-500', 'border-transparent');
+
+                        // Hide all panels
+                        workshopTabPanels.forEach(panel => panel.classList.add('hidden'));
+                        // Show the target panel
+                        const targetPanel = document.querySelector(button.dataset.tabTarget);
+                        if (targetPanel) targetPanel.classList.remove('hidden');
                     });
-                    // Activate the clicked button
-                    button.classList.add('bg-[#EA0264]', 'text-white');
-                    button.classList.remove('bg-gray-200', 'text-gray-600');
-
-                    // Hide all panels
-                    workshopTabPanels.forEach(panel => panel.classList.add('hidden'));
-                    // Show the target panel
-                    const targetPanel = document.querySelector(button.dataset.workshopTabTarget);
-                    if (targetPanel) targetPanel.classList.remove('hidden');
                 });
-            });
+            }
+
 
             // Modal Logic
             const modal = document.getElementById('form-modal');
             const closeModalButton = document.getElementById('close-modal-button');
             const formIframe = document.getElementById('form-iframe');
-            const registerButtons = document.querySelectorAll('.register-modal-button');
+            const registerButtons = document.querySelectorAll('.register-modal-button'); // Note: index.html might not have these buttons currently active in this view, but preserving logic
 
-            registerButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const formUrl = button.dataset.formUrl;
-                    if (formUrl) {
-                        formIframe.src = formUrl;
-                        modal.classList.remove('hidden');
-                        modal.classList.add('flex');
-                    }
+
+            if (registerButtons.length > 0) {
+                registerButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Logic for register buttons if they exist
+                        const formUrl = button.dataset.formUrl;
+                        if (formUrl) {
+                            formIframe.src = formUrl;
+                            modal.classList.remove('hidden');
+                            modal.classList.add('flex');
+                        }
+                    });
                 });
-            });
+            }
 
             const closeModal = () => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                formIframe.src = ''; // Clear src to stop form activity
+                if (modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    if (formIframe) formIframe.src = '';
+                }
             };
 
-            closeModalButton.addEventListener('click', closeModal);
+            if (closeModalButton) {
+                closeModalButton.addEventListener('click', closeModal);
+            }
+
 
             // Subscription Modal Logic
             const subscriptionModal = document.getElementById('subscription-modal');
@@ -573,6 +612,66 @@
                     subscriptionModal.classList.add('hidden');
                     subscriptionModal.classList.remove('flex');
                 });
+            }
+
+            // News Ticker Logic
+            const newsContainer = document.getElementById('news-typewriter');
+            // Cursor removed
+            let newsItems = [];
+            let currentNewsIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typeSpeed = 50; // Speed of typing
+            let deleteSpeed = 30; // Speed of deleting
+            let holdTime = 2000; // Time to hold the full text
+
+            fetch('news.json')
+                .then(response => response.json())
+                .then(data => {
+                    newsItems = data.map(item => item.text);
+
+                    // SEO Improvement: Populate hidden container with all news text
+                    const seoContainer = document.getElementById('seo-news-content');
+                    if (seoContainer) {
+                        seoContainer.textContent = newsItems.join(' | ');
+                    }
+
+                    if (newsItems.length > 0) {
+                        typeWriter();
+                    }
+                })
+                .catch(error => console.error('Error fetching news:', error));
+
+            function typeWriter() {
+                const currentText = newsItems[currentNewsIndex];
+
+                if (isDeleting) {
+                    newsContainer.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    newsContainer.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                // Cursor position update (simple approximation, exact positioning might need more complex CSS/JS relationship)
+                // actually simpler to just let it sit next to the span inline.
+
+                let nextSpeed = typeSpeed;
+
+                if (!isDeleting && charIndex === currentText.length) {
+                    // Finished typing
+                    isDeleting = true;
+                    nextSpeed = holdTime; // Wait before deleting
+                } else if (isDeleting && charIndex === 0) {
+                    // Finished deleting
+                    isDeleting = false;
+                    currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+                    nextSpeed = 500; // Pause before typing next
+                } else if (isDeleting) {
+                    nextSpeed = deleteSpeed;
+                }
+
+                setTimeout(typeWriter, nextSpeed);
             }
         });
     </script>
