@@ -35,6 +35,11 @@
             overflow-y: scroll;
         }
 
+        /* Hide Tutorbase attribution */
+        [data-tb-attribution="true"] {
+            display: none !important;
+        }
+
         /* Custom scrollbar for tabs on mobile */
         .custom-scrollbar::-webkit-scrollbar {
             display: none;
@@ -551,7 +556,7 @@
 
 
     <!-- Tutorbase WhatsApp Widget -->
-    <script src="https://tutorbase.com/widget.js?id=7s8yadcz" defer></script>
+    <script src="js/tutorbase.js" defer></script>
     <!-- /Tutorbase WhatsApp Widget -->
 
     <!-- Fillout Form Script -->
