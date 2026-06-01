@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- Homepage: Highest priority -->
+<url>
+  <loc>https://www.learnloomglobal.com/</loc>
+  <lastmod>2026-05-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+
+<!-- About Us Page -->
+<url>
+  <loc>https://www.learnloomglobal.com/AboutUs</loc>
+  <lastmod>2026-05-31</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<!-- Workshop Page -->
+<url>
+  <loc>https://www.learnloomglobal.com/workshop</loc>
+  <lastmod>2026-05-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<!-- FAQ Page -->
+<url>
+  <loc>https://www.learnloomglobal.com/faq</loc>
+  <lastmod>2026-05-31</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+
+<!-- Contact Us Page -->
+<url>
+  <loc>https://www.learnloomglobal.com/Contactus</loc>
+  <lastmod>2026-05-31</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+
+<!-- Blogs Page -->
+<url>
+  <loc>https://www.learnloomglobal.com/blogs</loc>
+  <lastmod>2026-05-31</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+</urlset>

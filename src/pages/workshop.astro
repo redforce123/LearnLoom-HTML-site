@@ -1,0 +1,320 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Workshops - LearnLoom" description="Join LearnLoom's special workshops to boost your skills and explore new topics. Register for upcoming workshops or view our past events.">
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+
+        <!-- Workshops Section -->
+        <div class="py-12 relative">
+            <!-- Ambient Backdrop Glow -->
+            <div class="absolute top-12 left-1/3 w-[450px] h-[450px] bg-pink-100/20 rounded-full filter blur-3xl -z-10"></div>
+
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-2 bg-pink-50 border border-pink-100/60 px-4 py-1.5 rounded-full text-xs font-bold text-[#EA0264] mb-4">
+                    <span>Events & Programs</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight">Workshops</h1>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">Join our special workshops to boost your
+                    skills, learn creative projects, and explore new educational horizons. Seats are limited!</p>
+            </div>
+
+            <!-- Workshop Sub-navigation (Sleek SaaS track) -->
+            <div class="flex justify-center mb-12">
+                <div class="flex space-x-1.5 bg-slate-200/40 p-1.5 rounded-2xl border border-slate-200/30">
+                    <button data-workshop-tab-target="#upcoming-workshops"
+                        class="workshop-tab-button py-2.5 px-6 font-bold text-sm rounded-xl transition-all duration-300 text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10">Upcoming</button>
+                    <button data-workshop-tab-target="#past-workshops"
+                        class="workshop-tab-button py-2.5 px-6 font-bold text-sm rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900 hover:bg-white/60">Past</button>
+                </div>
+            </div>
+
+            <!-- Upcoming Workshops Panel -->
+            <div id="upcoming-workshops" class="workshop-tab-panel">
+                <div class="text-center py-16 bg-white/70 backdrop-blur-md rounded-3xl shadow-xl border border-slate-100/60 max-w-2xl mx-auto px-6 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#FF2E93] to-[#EA0264]"></div>
+                    <div class="mx-auto w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center text-[#EA0264] mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a9.04 9.04 0 01-1.8-.74l-.063-.037c-.857-.5-1.961-.142-2.502.8l-.204.356a.75.75 0 01-1.328-.79l.204-.356a3.75 3.75 0 00.569-3.486c-.532-1.782-1.782-3.153-3.486-3.486a3.75 3.75 0 00-3.486.569l-.356.204a.75.75 0 01-.79-1.328l.356-.204a5.252 5.252 0 015.486-.569c1.782.532 3.153 1.782 3.486 3.486a5.252 5.252 0 01-.569 5.486l-.204.356a.75.75 0 01-1.328-.79l.204-.356z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Stay Tuned!</h3>
+                    <p class="text-slate-600 mb-8 max-w-lg mx-auto text-sm md:text-base leading-relaxed">Subscribe to our channels to get regular updates
+                        on upcoming workshops. You can also browse our past workshops from the selector above.</p>
+                    
+                    <div class="flex justify-center space-x-4">
+                        <a href="https://www.facebook.com/Learnloom.com.au/" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-500 hover:text-white transition-colors duration-300 p-3 bg-slate-100 hover:bg-[#EA0264] rounded-2xl">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/learnloom.com.au/" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-500 hover:text-white transition-colors duration-300 p-3 bg-slate-100 hover:bg-[#EA0264] rounded-2xl">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="https://in.linkedin.com/company/learnloomglobal" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-slate-500 hover:text-white transition-colors duration-300 p-3 bg-slate-100 hover:bg-[#EA0264] rounded-2xl">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Workshops Panel (Hidden by default) -->
+            <div id="past-workshops" class="workshop-tab-panel hidden relative group">
+                <!-- Navigation Buttons (Frosted pill arrows) -->
+                <button id="prevBtn"
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 -ml-4 lg:-ml-12 bg-white/80 border border-slate-100 backdrop-blur-md text-[#EA0264] p-3.5 rounded-full shadow-lg z-10 hover:bg-[#EA0264] hover:text-white transition-all duration-300 focus:outline-none hidden md:block"
+                    aria-label="Previous workshop">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn"
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 -mr-4 lg:-mr-12 bg-white/80 border border-slate-100 backdrop-blur-md text-[#EA0264] p-3.5 rounded-full shadow-lg z-10 hover:bg-[#EA0264] hover:text-white transition-all duration-300 focus:outline-none hidden md:block"
+                    aria-label="Next workshop">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Carousel Container (Grid display item templates) -->
+                <div id="carousel-scroll-container"
+                    class="flex overflow-x-auto scrollbar-hide space-x-8 pb-6 scroll-smooth">
+                    <!-- Past Workshop Poster Science Feb 2026 -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/ActiveWorkshops/ScienceWorkshop_Feb2026.jpg"
+                                alt="Science Workshop February 2026"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Science Workshop 2026</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster Parent 2026 -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/ParentWorkshop_2026.webp"
+                                alt="Poster for LearnLoom Parent Workshop 2026 - Free online event for parents"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Parent Workshop 2026</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster Ozone Day -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/OzoneDayWorkshop.webp" alt="Poster for past Ozone Day Workshop"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Ozone Day Workshop</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster Father's Day -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/FathersDayWorkshop.webp" alt="Poster for past Father's Day Workshop"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Father's Day Workshop</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster Children's Day -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/ChildrensDayWorkshop.webp"
+                                alt="Poster for past Childrens Day Workshop"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Childrens Day Workshops</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster Flash Fiction -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/FlashFiction_Challenge.webp"
+                                alt="Poster for past Flash Fiction Challenge Workshop"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Flash Fiction Challenge</h3>
+                        </div>
+                    </div>
+                    <!-- Past Workshop Poster Olympiad -->
+                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="overflow-hidden">
+                            <img src="/Images/workshops/Olympiad.webp" alt="Poster for past Olympiad Workshop"
+                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy">
+                        </div>
+                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                            <h3 class="text-base font-extrabold text-slate-900">Olympiad Workshop</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Form Modal with Fillout Embed -->
+    <div id="form-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-3xl h-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-100">
+            <div class="flex justify-between items-center p-6 border-b border-slate-100">
+                <h3 class="text-xl font-bold text-slate-900">Register for Workshop</h3>
+                <button id="close-modal-button"
+                    class="text-slate-400 hover:text-slate-700 text-2xl font-bold leading-none p-1 transition-colors" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="p-4 flex-grow overflow-auto">
+                <div style="width:100%;height:500px;" data-fillout-id="c4QifFpxrmus" data-fillout-embed-type="standard"
+                    data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fillout Form Script -->
+    <script is:inline src="https://server.fillout.com/embed/v1/"></script>
+</BaseLayout>
+
+<!-- Client-side Interactive Carousel and Tabs Logic (Updated with Next Gen active states) -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const workshopTabButtons = document.querySelectorAll('.workshop-tab-button');
+        const workshopTabPanels = document.querySelectorAll('.workshop-tab-panel');
+
+        workshopTabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all buttons
+                workshopTabButtons.forEach(btn => {
+                    btn.className = "workshop-tab-button py-2.5 px-6 font-bold text-sm rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900 hover:bg-white/60";
+                });
+                // Activate the clicked button
+                button.className = "workshop-tab-button py-2.5 px-6 font-bold text-sm rounded-xl transition-all duration-300 text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10";
+
+                // Hide all panels
+                workshopTabPanels.forEach(panel => panel.classList.add('hidden'));
+                // Show the target panel
+                const targetPanel = document.querySelector((button as HTMLElement).dataset.workshopTabTarget || '');
+                if (targetPanel) targetPanel.classList.remove('hidden');
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('form-modal');
+        const closeModalButton = document.getElementById('close-modal-button');
+        const registerButtons = document.querySelectorAll('.register-modal-button');
+
+        if (registerButtons.length > 0) {
+            registerButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                    }
+                });
+            });
+        }
+
+        const closeModal = () => {
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        };
+
+        if (closeModalButton) {
+            closeModalButton.addEventListener('click', closeModal);
+        }
+
+        // Carousel Logic
+        const carouselContainer = document.getElementById('carousel-scroll-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let autoScrollInterval: number | undefined;
+
+        if (carouselContainer) {
+            const scrollAmount = () => {
+                const item = carouselContainer.querySelector('.carousel-item') as HTMLElement;
+                return item ? item.offsetWidth + 32 : 300;
+            };
+
+            const scrollNext = () => {
+                if (carouselContainer.scrollLeft + carouselContainer.clientWidth >= carouselContainer.scrollWidth - 10) {
+                    carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carouselContainer.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                }
+            };
+
+            const scrollPrev = () => {
+                if (carouselContainer.scrollLeft <= 0) {
+                    carouselContainer.scrollTo({ left: carouselContainer.scrollWidth, behavior: 'smooth' });
+                } else {
+                    carouselContainer.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+                }
+            };
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    stopAutoScroll();
+                    scrollNext();
+                    startAutoScroll();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    stopAutoScroll();
+                    scrollPrev();
+                    startAutoScroll();
+                });
+            }
+
+            const startAutoScroll = () => {
+                stopAutoScroll();
+                autoScrollInterval = window.setInterval(scrollNext, 4000);
+            };
+
+            const stopAutoScroll = () => {
+                if (autoScrollInterval) {
+                    clearInterval(autoScrollInterval);
+                    autoScrollInterval = undefined;
+                }
+            };
+
+            startAutoScroll();
+
+            carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+            carouselContainer.addEventListener('mouseleave', startAutoScroll);
+        }
+    });
+</script>
