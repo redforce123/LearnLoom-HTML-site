@@ -1,0 +1,5 @@
+projectdescription.txt
+node_modules/
+.astro/
+dist/
+.DS_Store

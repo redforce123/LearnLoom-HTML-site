@@ -1,0 +1,154 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "LearnLoom - Global STEAM Education Program", 
+  description = "Personalized 1-on-1 STEAM education program for students globally. LearnLoom helps students build confidence and excel in Maths, English, and Science. Book your free demo!" 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="facebook-domain-verification" content="sj0hnvhnlorgcjkfx08p21smhyhuuy" />
+    <title>{title}</title>
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME348T0H9Q"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-ME348T0H9Q');
+    </script>
+
+    <!-- SEO Meta Description -->
+    <meta name="description" content={description} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/Images/LearnLoom_Logo.png" />
+    <link rel="apple-touch-icon" href="/Images/LearnLoom_Logo.png" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "LearnLoom",
+      "url": "https://www.learnloomglobal.com",
+      "logo": "https://www.learnloomglobal.com/Images/LearnLoom_Logo.png",
+      "description": "LearnLoom provides a personalized global STEAM education program to help students build confidence and excel worldwide.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61 416 289 704",
+        "contactType": "customer service",
+        "email": "admin@learnloom.com.au"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Learnloom.com.au/"
+      ]
+    }
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script is:inline>
+      !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return; n = f.fbq = function () {
+              n.callMethod ?
+                  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+          n.queue = []; t = b.createElement(e); t.async = !0;
+          t.src = v; s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '886550633716318');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=886550633716318&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Global Styles & Custom Font Overrides -->
+    <style is:global>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+        /* Premium radial mesh backdrop gradient */
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(253, 244, 245, 0.4) 0px, transparent 50%), 
+          radial-gradient(at 100% 0%, rgba(254, 243, 199, 0.25) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, rgba(244, 242, 255, 0.4) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, rgba(253, 244, 245, 0.4) 0px, transparent 50%);
+        background-attachment: fixed;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      /* Hide Tutorbase attribution */
+      [data-tb-attribution="true"] {
+        display: none !important;
+      }
+
+      /* Custom scrollbar for mobile tabs */
+      .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .custom-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .typewriter-text {
+        font-family: 'Outfit', sans-serif;
+        background: linear-gradient(135deg, #FF2E93 0%, #EA0264 50%, #A80148 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+        font-size: 1.1rem;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+      }
+
+      /* Frosted glass utility classes */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body class="text-slate-800 min-h-screen flex flex-col antialiased">
+    <!-- Navigation Header -->
+    <Header />
+
+    <!-- Main Dynamic Content Slot -->
+    <slot />
+
+    <!-- Central Footer -->
+    <Footer />
+
+    <!-- Tutorbase WhatsApp Widget script (loaded locally) -->
+    <script src="/js/tutorbase.js" defer></script>
+  </body>
+</html>
