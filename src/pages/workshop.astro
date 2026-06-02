@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import pastWorkshops from '../../public/workshops.json';
 ---
 
 <BaseLayout title="Workshops - LearnLoom" description="Join LearnLoom's special workshops to boost your skills and explore new topics. Register for upcoming workshops or view our past events.">
@@ -100,87 +101,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <!-- Carousel Container (Grid display item templates) -->
                 <div id="carousel-scroll-container"
                     class="flex overflow-x-auto scrollbar-hide space-x-8 pb-6 scroll-smooth">
-                    <!-- Past Workshop Poster Science Feb 2026 -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/ActiveWorkshops/ScienceWorkshop_Feb2026.jpg"
-                                alt="Science Workshop February 2026"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
+                    {pastWorkshops.map((workshop) => (
+                        <div class="carousel-item w-full sm:w-[calc((100%-2rem)/2)] md:w-[calc((100%-4rem)/3)] lg:w-[calc((100%-6rem)/4)] flex-shrink-0 bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
+                            <div class="overflow-hidden">
+                                <img src={workshop.image}
+                                    alt={workshop.title}
+                                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy">
+                            </div>
+                            <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
+                                <h3 class="text-base font-extrabold text-slate-900">{workshop.title}</h3>
+                            </div>
                         </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Science Workshop 2026</h3>
-                        </div>
-                    </div>
-                    <!-- Past Workshop Poster Parent 2026 -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/ParentWorkshop_2026.webp"
-                                alt="Poster for LearnLoom Parent Workshop 2026 - Free online event for parents"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Parent Workshop 2026</h3>
-                        </div>
-                    </div>
-                    <!-- Past Workshop Poster Ozone Day -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/OzoneDayWorkshop.webp" alt="Poster for past Ozone Day Workshop"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Ozone Day Workshop</h3>
-                        </div>
-                    </div>
-                    <!-- Past Workshop Poster Father's Day -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/FathersDayWorkshop.webp" alt="Poster for past Father's Day Workshop"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Father's Day Workshop</h3>
-                        </div>
-                    </div>
-                    <!-- Past Workshop Poster Children's Day -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/ChildrensDayWorkshop.webp"
-                                alt="Poster for past Childrens Day Workshop"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Childrens Day Workshops</h3>
-                        </div>
-                    </div>
-                    <!-- Past Workshop Poster Flash Fiction -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/FlashFiction_Challenge.webp"
-                                alt="Poster for past Flash Fiction Challenge Workshop"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Flash Fiction Challenge</h3>
-                        </div>
-                    </div>
-                    <!-- Past Workshop Poster Olympiad -->
-                    <div class="carousel-item bg-white/80 backdrop-blur-md border border-slate-100/60 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl hover:border-pink-200/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div class="overflow-hidden">
-                            <img src="/Images/workshops/Olympiad.webp" alt="Poster for past Olympiad Workshop"
-                                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy">
-                        </div>
-                        <div class="p-6 border-t border-slate-50/50 bg-white/50 text-center">
-                            <h3 class="text-base font-extrabold text-slate-900">Olympiad Workshop</h3>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
