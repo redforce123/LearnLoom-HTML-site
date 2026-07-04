@@ -284,9 +284,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
     </div>
 
-    <!-- Fillout Form Script -->
-    <script is:inline src="https://server.fillout.com/embed/v1/"></script>
-
     <!-- Client-side Interactive Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -353,6 +350,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 subscribeButton.addEventListener('click', () => {
                     subscriptionModal.classList.remove('hidden');
                     subscriptionModal.classList.add('flex');
+
+                    // Dynamically load Fillout script on demand
+                    if (!document.getElementById('fillout-embed-script')) {
+                        const script = document.createElement('script');
+                        script.id = 'fillout-embed-script';
+                        script.src = 'https://server.fillout.com/embed/v1/';
+                        document.body.appendChild(script);
+                    }
                 });
             }
 
