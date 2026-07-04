@@ -21,13 +21,67 @@ const {
     <meta name="facebook-domain-verification" content="sj0hnvhnlorgcjkfx08p21smhyhuuy" />
     <title>{title}</title>
     
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME348T0H9Q"></script>
+    <!-- Google Tag & Meta Pixel Lazy Loader -->
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-ME348T0H9Q');
+      (function() {
+        let scriptsLoaded = false;
+
+        function loadThirdPartyScripts() {
+          if (scriptsLoaded) return;
+          scriptsLoaded = true;
+
+          // Remove listeners
+          window.removeEventListener('scroll', loadThirdPartyScripts);
+          window.removeEventListener('pointermove', loadThirdPartyScripts);
+          window.removeEventListener('touchstart', loadThirdPartyScripts);
+          window.removeEventListener('keydown', loadThirdPartyScripts);
+
+          // 1. Google Analytics
+          const gtmScript = document.createElement('script');
+          gtmScript.async = true;
+          gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ME348T0H9Q';
+          document.head.appendChild(gtmScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-ME348T0H9Q');
+
+          // 2. Meta Pixel
+          !function (f, b, e, v, n, t, s) {
+              if (f.fbq) return; n = f.fbq = function () {
+                  n.callMethod ?
+                      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+              };
+              if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+              n.queue = []; t = b.createElement(e); t.async = !0;
+              t.src = v; s = b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t, s)
+          }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '886550633716318');
+          fbq('track', 'PageView');
+
+          // 3. Tutorbase WhatsApp Widget (Local Script)
+          const tutorbaseScript = document.createElement('script');
+          tutorbaseScript.src = '/js/tutorbase.js';
+          tutorbaseScript.defer = true;
+          document.body.appendChild(tutorbaseScript);
+        }
+
+        // Trigger loading on user interaction or after a 3.5-second timeout
+        window.addEventListener('scroll', loadThirdPartyScripts, { passive: true });
+        window.addEventListener('pointermove', loadThirdPartyScripts, { passive: true });
+        window.addEventListener('touchstart', loadThirdPartyScripts, { passive: true });
+        window.addEventListener('keydown', loadThirdPartyScripts, { passive: true });
+        
+        // Load fallback after 3.5s of page load
+        if (document.readyState === 'complete') {
+          setTimeout(loadThirdPartyScripts, 3500);
+        } else {
+          window.addEventListener('load', () => setTimeout(loadThirdPartyScripts, 3500));
+        }
+      })();
     </script>
 
     <!-- SEO Meta Description -->
@@ -51,11 +105,35 @@ const {
       "url": "https://www.learnloomglobal.com",
       "logo": "https://www.learnloomglobal.com/Images/LearnLoom_Logo.png",
       "description": "LearnLoom provides a personalized global STEAM education program to help students build confidence and excel worldwide.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+61 416 289 704",
-        "contactType": "customer service",
-        "email": "admin@learnloom.com.au"
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+61 416 289 704",
+          "contactType": "customer service",
+          "email": "admin@learnloom.com.au",
+          "areaServed": "AU"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 77158 39704",
+          "contactType": "customer service",
+          "email": "admin@learnloom.com.au",
+          "areaServed": "IN"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1 912 955 3259",
+          "contactType": "customer service",
+          "email": "admin@learnloom.com.au",
+          "areaServed": "US"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tower 5, Bhartiya city, Thanisandra",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
       },
       "sameAs": [
         "https://www.facebook.com/Learnloom.com.au/"
@@ -63,24 +141,9 @@ const {
     }
     </script>
 
-    <!-- Meta Pixel Code -->
-    <script is:inline>
-      !function (f, b, e, v, n, t, s) {
-          if (f.fbq) return; n = f.fbq = function () {
-              n.callMethod ?
-                  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-          };
-          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-          n.queue = []; t = b.createElement(e); t.async = !0;
-          t.src = v; s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s)
-      }(window, document, 'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '886550633716318');
-      fbq('track', 'PageView');
-    </script>
+    <!-- Meta Pixel Noscript (non-blocking fallback) -->
     <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=886550633716318&ev=PageView&noscript=1" />
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=886550633716318&ev=PageView&noscript=1" alt="" />
     </noscript>
 
     <!-- Global Styles & Custom Font Overrides -->
@@ -148,7 +211,6 @@ const {
     <!-- Central Footer -->
     <Footer />
 
-    <!-- Tutorbase WhatsApp Widget script (loaded locally) -->
-    <script src="/js/tutorbase.js" defer></script>
+    <!-- Tutorbase WhatsApp Widget dynamically loaded on interaction -->
   </body>
 </html>

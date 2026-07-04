@@ -133,9 +133,6 @@ import pastWorkshops from '../../public/workshops.json';
             </div>
         </div>
     </div>
-
-    <!-- Fillout Form Script -->
-    <script is:inline src="https://server.fillout.com/embed/v1/"></script>
 </BaseLayout>
 
 <!-- Client-side Interactive Carousel and Tabs Logic (Updated with Next Gen active states) -->
@@ -172,6 +169,14 @@ import pastWorkshops from '../../public/workshops.json';
                     if (modal) {
                         modal.classList.remove('hidden');
                         modal.classList.add('flex');
+
+                        // Dynamically load Fillout script on demand
+                        if (!document.getElementById('fillout-embed-script')) {
+                            const script = document.createElement('script');
+                            script.id = 'fillout-embed-script';
+                            script.src = 'https://server.fillout.com/embed/v1/';
+                            document.body.appendChild(script);
+                        }
                     }
                 });
             });
