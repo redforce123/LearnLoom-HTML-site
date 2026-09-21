@@ -6,6 +6,7 @@ const pathname = Astro.url.pathname;
 const isHome = pathname === '/' || pathname === '/index.html' || pathname === '/index';
 const isAbout = pathname.includes('/AboutUs');
 const isWorkshop = pathname.includes('/workshop');
+const isResources = pathname.includes('/resources');
 const isFaq = pathname.includes('/faq');
 const isContact = pathname.includes('/Contactus');
 const isLogin = pathname.includes('/login');
@@ -26,6 +27,7 @@ const isLogin = pathname.includes('/login');
             <a href="/" class={`text-sm font-semibold px-4 py-1.5 rounded-full transition-all duration-300 ${isHome ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}>Home</a>
             <a href="/AboutUs" class={`text-sm font-semibold px-4 py-1.5 rounded-full transition-all duration-300 ${isAbout ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}>About Us</a>
             <a href="/workshop" class={`text-sm font-semibold px-4 py-1.5 rounded-full transition-all duration-300 ${isWorkshop ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}>Workshop</a>
+            <a href="/resources" class={`text-sm font-semibold px-4 py-1.5 rounded-full transition-all duration-300 ${isResources ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}>Free Resources</a>
             <a href="/faq" class={`text-sm font-semibold px-4 py-1.5 rounded-full transition-all duration-300 ${isFaq ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}>FAQ</a>
             <a href="/Contactus" class={`text-sm font-semibold px-4 py-1.5 rounded-full transition-all duration-300 ${isContact ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264] shadow-md shadow-pink-500/10' : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'}`}>Contact Us</a>
         </div>
@@ -50,6 +52,7 @@ const isLogin = pathname.includes('/login');
             <a href="/" class={`block py-2.5 px-4 text-base font-semibold rounded-xl transition-all duration-300 ${isHome ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264]' : 'text-slate-700 hover:bg-slate-100/70'}`}>Home</a>
             <a href="/AboutUs" class={`block py-2.5 px-4 text-base font-semibold rounded-xl transition-all duration-300 ${isAbout ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264]' : 'text-slate-700 hover:bg-slate-100/70'}`}>About Us</a>
             <a href="/workshop" class={`block py-2.5 px-4 text-base font-semibold rounded-xl transition-all duration-300 ${isWorkshop ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264]' : 'text-slate-700 hover:bg-slate-100/70'}`}>Workshop</a>
+            <a href="/resources" class={`block py-2.5 px-4 text-base font-semibold rounded-xl transition-all duration-300 ${isResources ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264]' : 'text-slate-700 hover:bg-slate-100/70'}`}>Free Resources</a>
             <a href="/faq" class={`block py-2.5 px-4 text-base font-semibold rounded-xl transition-all duration-300 ${isFaq ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264]' : 'text-slate-700 hover:bg-slate-100/70'}`}>FAQ</a>
             <a href="/Contactus" class={`block py-2.5 px-4 text-base font-semibold rounded-xl transition-all duration-300 ${isContact ? 'text-white bg-gradient-to-r from-[#FF2E93] to-[#EA0264]' : 'text-slate-700 hover:bg-slate-100/70'}`}>Contact Us</a>
             <hr class="my-3 border-slate-100">
