@@ -1,200 +1,676 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Structured metadata for all 11 Olympiad Question Papers
+// Structured metadata for all 32 Olympiad Question Papers
 const papers = [
-  // Primary School (Grades 4-5)
   {
-    id: 'grade-04-final',
-    title: 'Grade 4 Olympiad Final Examination Paper',
-    grade: 'Grade 4',
-    category: 'primary',
-    categoryLabel: 'Primary School (Grades 4-5)',
-    stream: 'General',
-    subjects: ['Mathematics', 'General Science'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-04_Final.pdf',
-    fileName: 'Olympiad_Grade-04_Final.pdf',
-    fileSize: '378 KB',
-    description: 'Comprehensive Olympiad final assessment covering essential foundational mathematics, numerical patterns, and elementary science reasoning.',
-    year: 'Official Final Set',
-    popular: true
+    "id": "grade-01-cs",
+    "title": "Grade 1 Computer Science (Cyber) Olympiad Paper",
+    "grade": "Grade 1",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Computer Science",
+    "subjects": [
+      "Computer Science",
+      "Cyber Olympiad",
+      "Basics of Computers",
+      "Input/Output Devices"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-01_Computer-Science.pdf",
+    "fileName": "Olympiad_Grade-01_Computer-Science.pdf",
+    "description": "Foundational computer knowledge and logic paper for Grade 1 students, covering computer parts, keyboard basics, mouse operations, and simple cyber ethics.",
+    "year": "Official Olympiad Paper",
+    "popular": true,
+    "fileSize": "4.2 MB"
   },
   {
-    id: 'grade-05-set-01',
-    title: 'Grade 5 Olympiad Practice Paper (Set 1)',
-    grade: 'Grade 5',
-    category: 'primary',
-    categoryLabel: 'Primary School (Grades 4-5)',
-    stream: 'General',
-    subjects: ['Mathematics', 'Logical Reasoning'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Set-01.pdf',
-    fileName: 'Olympiad_Grade-05_Set-01.pdf',
-    fileSize: '443 KB',
-    description: 'Curated problem set testing intermediate arithmetic, fractions, pattern recognition, spatial reasoning, and critical problem solving.',
-    year: 'Practice Set 01',
-    popular: false
+    "id": "grade-01-social",
+    "title": "Grade 1 Social Studies Olympiad Paper",
+    "grade": "Grade 1",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "General Awareness",
+      "Community & Environment"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-01_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-01_Social-Studies.pdf",
+    "description": "Foundational social awareness and environmental studies paper for early primary learners, featuring visual prompts, family roles, and community safety.",
+    "year": "Official Olympiad Paper",
+    "popular": true,
+    "fileSize": "331 KB"
   },
   {
-    id: 'grade-05-set-02',
-    title: 'Grade 5 Olympiad Practice Paper (Set 2)',
-    grade: 'Grade 5',
-    category: 'primary',
-    categoryLabel: 'Primary School (Grades 4-5)',
-    stream: 'General',
-    subjects: ['Mathematics', 'General Science'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Set-02.pdf',
-    fileName: 'Olympiad_Grade-05_Set-02.pdf',
-    fileSize: '443 KB',
-    description: 'Advanced practice questions designed for competitive exam readiness, scientific methodology, and analytical deduction.',
-    year: 'Practice Set 02',
-    popular: false
-  },
-
-  // Middle School (Grade 8)
-  {
-    id: 'grade-08',
-    title: 'Grade 8 Olympiad Question Paper',
-    grade: 'Grade 8',
-    category: 'middle',
-    categoryLabel: 'Middle School (Grade 8)',
-    stream: 'General',
-    subjects: ['Mathematics', 'Science'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Middle_School (Grade 8)/Olympiad_Grade-08.pdf',
-    fileName: 'Olympiad_Grade-08.pdf',
-    fileSize: '342 KB',
-    description: 'Challenging middle-school olympiad questions covering algebraic equations, geometric theorems, physics motion, and chemical fundamentals.',
-    year: 'Complete Paper',
-    popular: true
-  },
-
-  // Secondary School (Grades 9-10) - General Science & Maths
-  {
-    id: 'grade-09-general',
-    title: 'Grade 9 Olympiad Paper - Science & Mathematics',
-    grade: 'Grade 9',
-    category: 'secondary',
-    categoryLabel: 'Secondary School (Grades 9-10)',
-    stream: 'General Science & Maths',
-    subjects: ['Science', 'Mathematics'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/General_Science_Maths/Olympiad_Grade-09_General.pdf',
-    fileName: 'Olympiad_Grade-09_General.pdf',
-    fileSize: '4.1 MB',
-    description: 'Full question bank with extensive diagrams, real-world science applications, coordinate geometry, and rigorous analytical problems.',
-    year: 'Comprehensive Paper',
-    popular: true
+    "id": "grade-02-cs",
+    "title": "Grade 2 Computer Science (Cyber) Olympiad Paper",
+    "grade": "Grade 2",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Computer Science",
+    "subjects": [
+      "Computer Science",
+      "Hardware & Software",
+      "Tux Paint",
+      "Logical Sequencing"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-02_Computer-Science.pdf",
+    "fileName": "Olympiad_Grade-02_Computer-Science.pdf",
+    "description": "Interactive Cyber Olympiad assessment testing computer components, storage devices, basic MS Paint / Tux Paint tools, and algorithmic sequencing.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "386 KB"
   },
   {
-    id: 'grade-10-general',
-    title: 'Grade 10 Olympiad Paper - Science & Mathematics',
-    grade: 'Grade 10',
-    category: 'secondary',
-    categoryLabel: 'Secondary School (Grades 9-10)',
-    stream: 'General Science & Maths',
-    subjects: ['Science', 'Mathematics'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/General_Science_Maths/Olympiad_Grade-10_General.pdf',
-    fileName: 'Olympiad_Grade-10_General.pdf',
-    fileSize: '381 KB',
-    description: 'Rigorous grade 10 test papers covering trigonometry, quadratic formulas, electricity, magnetism, optics, and chemical equations.',
-    year: 'Standard Olympiad',
-    popular: false
+    "id": "grade-02-english",
+    "title": "Grade 2 English Olympiad Paper",
+    "grade": "Grade 2",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "English Language",
+    "subjects": [
+      "English",
+      "Grammar",
+      "Nouns & Verbs",
+      "Vocabulary Building"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-02_English.pdf",
+    "fileName": "Olympiad_Grade-02_English.pdf",
+    "description": "Comprehensive English language paper testing early grammatical mastery, articles, singular/plural, spelling rules, and pictorial comprehension.",
+    "year": "Language Olympiad",
+    "popular": true,
+    "fileSize": "344 KB"
   },
   {
-    id: 'grade-10-final',
-    title: 'Grade 10 Olympiad Final Championship Paper',
-    grade: 'Grade 10',
-    category: 'secondary',
-    categoryLabel: 'Secondary School (Grades 9-10)',
-    stream: 'General Science & Maths',
-    subjects: ['Science', 'Mathematics', 'Aptitude'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/General_Science_Maths/Olympiad_Grade-10_Final.pdf',
-    fileName: 'Olympiad_Grade-10_Final.pdf',
-    fileSize: '397 KB',
-    description: 'Championship-tier final examination paper benchmarked against international Junior Science and Mathematics Olympiad standards.',
-    year: 'Championship Final',
-    popular: true
-  },
-
-  // Secondary School (Grades 9-10) - Social Studies
-  {
-    id: 'grade-09-social',
-    title: 'Grade 9 Social Studies Olympiad Paper',
-    grade: 'Grade 9',
-    category: 'secondary',
-    categoryLabel: 'Secondary School (Grades 9-10)',
-    stream: 'Social Studies',
-    subjects: ['Social Studies', 'History', 'Civics', 'Geography'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/Social_Studies/Olympiad_Grade-09_Social-Studies.pdf',
-    fileName: 'Olympiad_Grade-09_Social-Studies.pdf',
-    fileSize: '330 KB',
-    description: 'Specialized humanities examination focusing on world history, geographical topography, democratic institutions, and economic concepts.',
-    year: 'Social Studies Focus',
-    popular: false
+    "id": "grade-02-hindi",
+    "title": "Grade 2 Hindi Olympiad Paper",
+    "grade": "Grade 2",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Hindi Language",
+    "subjects": [
+      "Hindi",
+      "Vyakaran (Grammar)",
+      "Vocabulary"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-02_Hindi.pdf",
+    "fileName": "Olympiad_Grade-02_Hindi.pdf",
+    "description": "Early primary Hindi language examination testing basic grammar (vyakaran), word association, sentence building, and comprehension skills.",
+    "year": "Language Olympiad",
+    "popular": false,
+    "fileSize": "371 KB"
   },
   {
-    id: 'grade-10-social',
-    title: 'Grade 10 Social Studies Olympiad Paper',
-    grade: 'Grade 10',
-    category: 'secondary',
-    categoryLabel: 'Secondary School (Grades 9-10)',
-    stream: 'Social Studies',
-    subjects: ['Social Studies', 'Global Politics', 'Economics'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/Social_Studies/Olympiad_Grade-10_Social-Studies.pdf',
-    fileName: 'Olympiad_Grade-10_Social-Studies.pdf',
-    fileSize: '393 KB',
-    description: 'Comprehensive social sciences evaluation paper testing global governance, contemporary world history, resources, and fiscal development.',
-    year: 'Social Studies Focus',
-    popular: false
-  },
-
-  // Senior Secondary (Grades 11-12)
-  {
-    id: 'grade-11',
-    title: 'Grade 11 Senior Olympiad Paper',
-    grade: 'Grade 11',
-    category: 'senior',
-    categoryLabel: 'Senior Secondary (Grades 11-12)',
-    stream: 'Advanced STEM',
-    subjects: ['Advanced Mathematics', 'Physics', 'Chemistry'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Senior_Secondary (Grades 11-12)/Olympiad_Grade-11.pdf',
-    fileName: 'Olympiad_Grade-11.pdf',
-    fileSize: '381 KB',
-    description: 'Advanced pre-college competitive Olympiad exam targeting calculus fundamentals, classical mechanics, chemical bonding, and analytical proofs.',
-    year: 'Senior Division',
-    popular: true
+    "id": "grade-02-social",
+    "title": "Grade 2 Social Studies Olympiad Paper",
+    "grade": "Grade 2",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "Civic Habits",
+      "Our Environment"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-02_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-02_Social-Studies.pdf",
+    "description": "Engaging primary social studies paper exploring national symbols, neighborhood geography, basic civic sense, and natural habitats.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "318 KB"
   },
   {
-    id: 'grade-12',
-    title: 'Grade 12 Senior Olympiad Final Paper',
-    grade: 'Grade 12',
-    category: 'senior',
-    categoryLabel: 'Senior Secondary (Grades 11-12)',
-    stream: 'Advanced STEM',
-    subjects: ['Advanced STEM', 'Higher Mathematics', 'Modern Physics'],
-    fileUrl: '/resources/Olympiad_Question_Bank/Senior_Secondary (Grades 11-12)/Olympiad_Grade-12.pdf',
-    fileName: 'Olympiad_Grade-12.pdf',
-    fileSize: '383 KB',
-    description: 'Senior-tier Olympiad assessment for university-bound students and international STEM Olympiad contenders. In-depth theoretical problems.',
-    year: 'Senior Division Final',
-    popular: true
+    "id": "grade-03-cs",
+    "title": "Grade 3 Computer Science (Cyber) Olympiad Paper",
+    "grade": "Grade 3",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Computer Science",
+    "subjects": [
+      "Computer Science",
+      "Operating Systems",
+      "Word Processing",
+      "Internet Basics"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-03_Computer-Science.pdf",
+    "fileName": "Olympiad_Grade-03_Computer-Science.pdf",
+    "description": "Challenging Grade 3 cyber exam assessing Windows OS fundamentals, file management, typing basics, safe internet practices, and pattern logic.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "386 KB"
+  },
+  {
+    "id": "grade-03-hindi",
+    "title": "Grade 3 Hindi Olympiad Paper",
+    "grade": "Grade 3",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Hindi Language",
+    "subjects": [
+      "Hindi",
+      "Vyakaran",
+      "Reading Comprehension"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-03_Hindi.pdf",
+    "fileName": "Olympiad_Grade-03_Hindi.pdf",
+    "description": "Standard Grade 3 Hindi competitive test paper focusing on nouns, pronouns, antonyms, synonyms, spelling accuracy, and short passage deduction.",
+    "year": "Language Olympiad",
+    "popular": false,
+    "fileSize": "368 KB"
+  },
+  {
+    "id": "grade-03-social",
+    "title": "Grade 3 Social Studies Olympiad Paper",
+    "grade": "Grade 3",
+    "category": "primary-1-3",
+    "categoryLabel": "Primary School (Grades 1-3)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "Indian Heritage",
+      "Earth & Solar System"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 1-3)/Olympiad_Grade-03_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-03_Social-Studies.pdf",
+    "description": "Comprehensive grade 3 assessment paper covering planet Earth, cardinal directions, early human history, and community helpers.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "312 KB"
+  },
+  {
+    "id": "grade-04-english",
+    "title": "Grade 4 English Olympiad Paper",
+    "grade": "Grade 4",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "English Language",
+    "subjects": [
+      "English",
+      "Grammar",
+      "Tenses & Prepositions",
+      "Comprehension"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-04_English.pdf",
+    "fileName": "Olympiad_Grade-04_English.pdf",
+    "description": "Rigorous Grade 4 English Olympiad paper testing sentence structure, idioms, active/passive voice basics, context clues, and passage analysis.",
+    "year": "Language Olympiad",
+    "popular": true,
+    "fileSize": "330 KB"
+  },
+  {
+    "id": "grade-04-final",
+    "title": "Grade 4 Olympiad Final Examination Paper",
+    "grade": "Grade 4",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Mathematics",
+      "General Science"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-04_Final.pdf",
+    "fileName": "Olympiad_Grade-04_Final.pdf",
+    "description": "Comprehensive Olympiad final assessment covering essential foundational mathematics, numerical patterns, and elementary science reasoning.",
+    "year": "Official Final Set",
+    "popular": true,
+    "fileSize": "378 KB"
+  },
+  {
+    "id": "grade-04-hindi",
+    "title": "Grade 4 Hindi Olympiad Paper",
+    "grade": "Grade 4",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "Hindi Language",
+    "subjects": [
+      "Hindi",
+      "Vyakaran",
+      "Idioms & Comprehension"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-04_Hindi.pdf",
+    "fileName": "Olympiad_Grade-04_Hindi.pdf",
+    "description": "Advanced primary level Hindi test covering muhavare (idioms), sandhi basics, advanced vyakaran, and analytical paragraph comprehension.",
+    "year": "Language Olympiad",
+    "popular": false,
+    "fileSize": "349 KB"
+  },
+  {
+    "id": "grade-05-cs",
+    "title": "Grade 5 Computer Science (Cyber) Olympiad Paper",
+    "grade": "Grade 5",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "Computer Science",
+    "subjects": [
+      "Computer Science",
+      "Scratch / Coding Logic",
+      "MS Office",
+      "Internet Safety"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Computer-Science.pdf",
+    "fileName": "Olympiad_Grade-05_Computer-Science.pdf",
+    "description": "Upper primary Cyber Olympiad paper focusing on computer memory, binary concepts, block-based coding, presentation tools, and cyber hygiene.",
+    "year": "Official Olympiad Paper",
+    "popular": true,
+    "fileSize": "415 KB"
+  },
+  {
+    "id": "grade-05-hindi",
+    "title": "Grade 5 Hindi Olympiad Paper",
+    "grade": "Grade 5",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "Hindi Language",
+    "subjects": [
+      "Hindi",
+      "Vyakaran",
+      "Shabda Roop",
+      "Nibandh Chintan"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Hindi.pdf",
+    "fileName": "Olympiad_Grade-05_Hindi.pdf",
+    "description": "Comprehensive Grade 5 Hindi exam featuring complex grammar, tense consistency, proverbs, unseen prose, and literary vocabulary questions.",
+    "year": "Language Olympiad",
+    "popular": false,
+    "fileSize": "4.2 MB"
+  },
+  {
+    "id": "grade-05-set-01",
+    "title": "Grade 5 Olympiad Practice Paper (Set 1)",
+    "grade": "Grade 5",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Mathematics",
+      "Logical Reasoning"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Set-01.pdf",
+    "fileName": "Olympiad_Grade-05_Set-01.pdf",
+    "description": "Curated problem set testing intermediate arithmetic, fractions, pattern recognition, spatial reasoning, and critical problem solving.",
+    "year": "Practice Set 01",
+    "popular": false,
+    "fileSize": "443 KB"
+  },
+  {
+    "id": "grade-05-set-02",
+    "title": "Grade 5 Olympiad Practice Paper (Set 2)",
+    "grade": "Grade 5",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Mathematics",
+      "General Science"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Set-02.pdf",
+    "fileName": "Olympiad_Grade-05_Set-02.pdf",
+    "description": "Advanced practice questions designed for competitive exam readiness, scientific methodology, and analytical deduction.",
+    "year": "Practice Set 02",
+    "popular": false,
+    "fileSize": "443 KB"
+  },
+  {
+    "id": "grade-05-social",
+    "title": "Grade 5 Social Studies Olympiad Paper",
+    "grade": "Grade 5",
+    "category": "primary-4-5",
+    "categoryLabel": "Primary School (Grades 4-5)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "World Geography",
+      "Freedom Struggle",
+      "Constitution"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Primary_School (Grades 4-5)/Olympiad_Grade-05_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-05_Social-Studies.pdf",
+    "description": "In-depth social science assessment spanning continents, climatic zones, historical freedom movements, democratic rights, and environmental preservation.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "359 KB"
+  },
+  {
+    "id": "grade-06-cs",
+    "title": "Grade 6 Computer Science (Cyber) Olympiad Paper",
+    "grade": "Grade 6",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "Computer Science",
+    "subjects": [
+      "Computer Science",
+      "Programming Fundamentals",
+      "HTML Basics",
+      "Networking"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-06_Computer-Science.pdf",
+    "fileName": "Olympiad_Grade-06_Computer-Science.pdf",
+    "description": "Middle school Cyber Olympiad benchmark testing introductory programming concepts, HTML web tags, computer network topologies, and data storage logic.",
+    "year": "Official Olympiad Paper",
+    "popular": true,
+    "fileSize": "373 KB"
+  },
+  {
+    "id": "grade-06-hindi",
+    "title": "Grade 6 Hindi Olympiad Paper",
+    "grade": "Grade 6",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "Hindi Language",
+    "subjects": [
+      "Hindi",
+      "Vyakaran",
+      "Sahitya",
+      "Vakya Bhed"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-06_Hindi.pdf",
+    "fileName": "Olympiad_Grade-06_Hindi.pdf",
+    "description": "Rigorous middle school Hindi paper analyzing sentence transformations, compound words (samasa), poetic expressions, and analytical reading.",
+    "year": "Language Olympiad",
+    "popular": false,
+    "fileSize": "444 KB"
+  },
+  {
+    "id": "grade-06-social",
+    "title": "Grade 6 Social Studies Olympiad Paper",
+    "grade": "Grade 6",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "Ancient Civilizations",
+      "Globe & Maps",
+      "Civics"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-06_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-06_Social-Studies.pdf",
+    "description": "Fascinating evaluation covering Indus Valley and Vedic civilization, Earth motions, latitudes/longitudes, rural local government, and heritage conservation.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "361 KB"
+  },
+  {
+    "id": "grade-07-english",
+    "title": "Grade 7 English Olympiad Paper",
+    "grade": "Grade 7",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "English Language",
+    "subjects": [
+      "English",
+      "Grammar",
+      "Clauses & Phrases",
+      "Critical Reading"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-07_English.pdf",
+    "fileName": "Olympiad_Grade-07_English.pdf",
+    "description": "Advanced middle school English paper focusing on clause analysis, reported speech, literary devices, nuanced vocabulary, and inferential reading passages.",
+    "year": "Language Olympiad",
+    "popular": true,
+    "fileSize": "383 KB"
+  },
+  {
+    "id": "grade-07-social",
+    "title": "Grade 7 Social Studies Olympiad Paper",
+    "grade": "Grade 7",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "Medieval History",
+      "Atmosphere & Oceans",
+      "State Governance"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-07_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-07_Social-Studies.pdf",
+    "description": "Thorough assessment exploring medieval dynasties, atmospheric layers, ocean currents, state legislative functions, and gender equality studies.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "373 KB"
+  },
+  {
+    "id": "grade-08-english",
+    "title": "Grade 8 English Olympiad Paper",
+    "grade": "Grade 8",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "English Language",
+    "subjects": [
+      "English",
+      "Grammar & Syntax",
+      "Verbal Reasoning",
+      "Advanced Comprehension"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-08_English.pdf",
+    "fileName": "Olympiad_Grade-08_English.pdf",
+    "description": "Competitive Grade 8 English assessment testing complex syntax, condition clauses, rhetoric tools, verbal aptitude, and evaluative comprehension.",
+    "year": "Language Olympiad",
+    "popular": true,
+    "fileSize": "396 KB"
+  },
+  {
+    "id": "grade-08-general",
+    "title": "Grade 8 Olympiad Paper - Science & Mathematics",
+    "grade": "Grade 8",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Mathematics",
+      "Science",
+      "Algebra",
+      "Physics Motion"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-08_General.pdf",
+    "fileName": "Olympiad_Grade-08_General.pdf",
+    "description": "Challenging middle-school olympiad questions covering algebraic equations, geometric theorems, physics motion, and chemical fundamentals.",
+    "year": "Complete Paper",
+    "popular": true,
+    "fileSize": "342 KB"
+  },
+  {
+    "id": "grade-08-social",
+    "title": "Grade 8 Social Studies Olympiad Paper",
+    "grade": "Grade 8",
+    "category": "middle",
+    "categoryLabel": "Middle School (Grades 6-8)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "Modern World History",
+      "Resources & Industry",
+      "Judiciary System"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Middle_School (Grades 6-8)/Olympiad_Grade-08_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-08_Social-Studies.pdf",
+    "description": "Rigorous Grade 8 humanities exam assessing modern world history, industrial geography, mineral resources, Indian Constitution, and the judicial system.",
+    "year": "Official Olympiad Paper",
+    "popular": false,
+    "fileSize": "332 KB"
+  },
+  {
+    "id": "grade-09-general",
+    "title": "Grade 9 Olympiad Paper - Science & Mathematics",
+    "grade": "Grade 9",
+    "category": "secondary",
+    "categoryLabel": "Secondary School (Grades 9-10)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Science",
+      "Mathematics"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/General_Science_Maths/Olympiad_Grade-09_General.pdf",
+    "fileName": "Olympiad_Grade-09_General.pdf",
+    "description": "Full question bank with extensive diagrams, real-world science applications, coordinate geometry, and rigorous analytical problems.",
+    "year": "Comprehensive Paper",
+    "popular": true,
+    "fileSize": "4.0 MB"
+  },
+  {
+    "id": "grade-09-social",
+    "title": "Grade 9 Social Studies Olympiad Paper",
+    "grade": "Grade 9",
+    "category": "secondary",
+    "categoryLabel": "Secondary School (Grades 9-10)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "History",
+      "Civics",
+      "Geography"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/Social_Studies/Olympiad_Grade-09_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-09_Social-Studies.pdf",
+    "description": "Specialized humanities examination focusing on world history, geographical topography, democratic institutions, and economic concepts.",
+    "year": "Social Studies Focus",
+    "popular": false,
+    "fileSize": "330 KB"
+  },
+  {
+    "id": "grade-10-general",
+    "title": "Grade 10 Olympiad Paper - Science & Mathematics",
+    "grade": "Grade 10",
+    "category": "secondary",
+    "categoryLabel": "Secondary School (Grades 9-10)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Science",
+      "Mathematics"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/General_Science_Maths/Olympiad_Grade-10_General.pdf",
+    "fileName": "Olympiad_Grade-10_General.pdf",
+    "description": "Rigorous grade 10 test papers covering trigonometry, quadratic formulas, electricity, magnetism, optics, and chemical equations.",
+    "year": "Standard Olympiad",
+    "popular": false,
+    "fileSize": "381 KB"
+  },
+  {
+    "id": "grade-10-final",
+    "title": "Grade 10 Olympiad Final Championship Paper",
+    "grade": "Grade 10",
+    "category": "secondary",
+    "categoryLabel": "Secondary School (Grades 9-10)",
+    "stream": "General Science & Maths",
+    "subjects": [
+      "Science",
+      "Mathematics",
+      "Aptitude"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/General_Science_Maths/Olympiad_Grade-10_Final.pdf",
+    "fileName": "Olympiad_Grade-10_Final.pdf",
+    "description": "Championship-tier final examination paper benchmarked against international Junior Science and Mathematics Olympiad standards.",
+    "year": "Championship Final",
+    "popular": true,
+    "fileSize": "397 KB"
+  },
+  {
+    "id": "grade-10-social",
+    "title": "Grade 10 Social Studies Olympiad Paper",
+    "grade": "Grade 10",
+    "category": "secondary",
+    "categoryLabel": "Secondary School (Grades 9-10)",
+    "stream": "Social Studies",
+    "subjects": [
+      "Social Studies",
+      "Global Politics",
+      "Economics"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Secondary_School (Grades 9-10)/Social_Studies/Olympiad_Grade-10_Social-Studies.pdf",
+    "fileName": "Olympiad_Grade-10_Social-Studies.pdf",
+    "description": "Comprehensive social sciences evaluation paper testing global governance, contemporary world history, resources, and fiscal development.",
+    "year": "Social Studies Focus",
+    "popular": false,
+    "fileSize": "394 KB"
+  },
+  {
+    "id": "grade-11",
+    "title": "Grade 11 Senior Olympiad Paper",
+    "grade": "Grade 11",
+    "category": "senior",
+    "categoryLabel": "Senior Secondary (Grades 11-12)",
+    "stream": "Advanced STEM",
+    "subjects": [
+      "Advanced Mathematics",
+      "Physics",
+      "Chemistry"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Senior_Secondary (Grades 11-12)/Olympiad_Grade-11.pdf",
+    "fileName": "Olympiad_Grade-11.pdf",
+    "description": "Advanced pre-college competitive Olympiad exam targeting calculus fundamentals, classical mechanics, chemical bonding, and analytical proofs.",
+    "year": "Senior Division",
+    "popular": true,
+    "fileSize": "382 KB"
+  },
+  {
+    "id": "grade-12",
+    "title": "Grade 12 Senior Olympiad Final Paper",
+    "grade": "Grade 12",
+    "category": "senior",
+    "categoryLabel": "Senior Secondary (Grades 11-12)",
+    "stream": "Advanced STEM",
+    "subjects": [
+      "Advanced STEM",
+      "Higher Mathematics",
+      "Modern Physics"
+    ],
+    "fileUrl": "/resources/Olympiad_Question_Bank/Senior_Secondary (Grades 11-12)/Olympiad_Grade-12.pdf",
+    "fileName": "Olympiad_Grade-12.pdf",
+    "description": "Senior-tier Olympiad assessment for university-bound students and international STEM Olympiad contenders. In-depth theoretical problems.",
+    "year": "Senior Division Final",
+    "popular": true,
+    "fileSize": "383 KB"
   }
 ];
 
 const categories = [
-  { id: 'all', label: 'All Papers', count: 11 },
-  { id: 'primary', label: 'Primary (Grades 4-5)', count: 3 },
-  { id: 'middle', label: 'Middle School (Grade 8)', count: 1 },
-  { id: 'secondary', label: 'Secondary (Grades 9-10)', count: 5 },
-  { id: 'senior', label: 'Senior (Grades 11-12)', count: 2 }
+  { id: 'all', label: 'All Papers', count: papers.length },
+  { id: 'primary-1-3', label: 'Primary (Grades 1-3)', count: papers.filter(p => p.category === 'primary-1-3').length },
+  { id: 'primary-4-5', label: 'Primary (Grades 4-5)', count: papers.filter(p => p.category === 'primary-4-5').length },
+  { id: 'middle', label: 'Middle School (Grades 6-8)', count: papers.filter(p => p.category === 'middle').length },
+  { id: 'secondary', label: 'Secondary (Grades 9-10)', count: papers.filter(p => p.category === 'secondary').length },
+  { id: 'senior', label: 'Senior (Grades 11-12)', count: papers.filter(p => p.category === 'senior').length }
+];
+
+const streams = [
+  { id: 'all', label: 'All Subjects', count: papers.length },
+  { id: 'computer-science', label: 'Computer Science', match: 'Computer Science', count: papers.filter(p => p.stream === 'Computer Science').length },
+  { id: 'english', label: 'English', match: 'English Language', count: papers.filter(p => p.stream === 'English Language').length },
+  { id: 'hindi', label: 'Hindi', match: 'Hindi Language', count: papers.filter(p => p.stream === 'Hindi Language').length },
+  { id: 'social-studies', label: 'Social Studies', match: 'Social Studies', count: papers.filter(p => p.stream === 'Social Studies').length },
+  { id: 'science-maths', label: 'Science & Maths', match: 'General Science & Maths', count: papers.filter(p => p.stream === 'General Science & Maths').length },
+  { id: 'advanced-stem', label: 'Advanced STEM', match: 'Advanced STEM', count: papers.filter(p => p.stream === 'Advanced STEM').length }
 ];
 
 // Rich SEO Metadata for Google
-const pageTitle = "Free Olympiad Question Bank & Past Papers (Grades 4-12) | LearnLoom";
-const pageDescription = "Download free Olympiad question papers, sample tests, and past exams for Grades 4 to 12. Covers Mathematics, General Science, and Social Studies in PDF format with direct free downloads.";
+const pageTitle = "Free Olympiad Question Bank & Past Papers (Grades 1-12) | LearnLoom";
+const pageDescription = "Download 32 free Olympiad question papers and sample tests for Grades 1 to 12 in PDF format. Includes Computer Science (Cyber), English, Hindi, Mathematics, Science, and Social Studies with direct free downloads.";
 const canonicalUrl = "https://www.learnloomglobal.com/resources";
+
+const faqs = [
+  {
+    q: "Are all Olympiad question papers on LearnLoom completely free to download?",
+    a: "Yes! All 32 examination papers across Grades 1 through 12 are 100% free for students, parents, and educators. You can preview them directly in your browser or download high-resolution PDF copies without registration or fees."
+  },
+  {
+    q: "Which subjects and grades are covered in this question bank?",
+    a: "Our question bank spans Grades 1 to 12 across 6 major competitive streams: Computer Science (Cyber Olympiad), English Language, Hindi Language, Social Studies / Social Science, General Science & Mathematics, and Advanced STEM (Physics, Chemistry & Higher Math for Grades 11-12)."
+  },
+  {
+    q: "How should students use these sample papers to prepare for Olympiads?",
+    a: "We recommend setting a timed practice session simulating real examination conditions. After completing a paper, review incorrect answers, identify weak conceptual areas, and practice similar problem types. For personalized guidance, students can also book a free 1-on-1 demo session with a LearnLoom Olympiad mentor."
+  },
+  {
+    q: "Does LearnLoom offer 1-on-1 coaching for competitive Olympiad preparation?",
+    a: "Yes! LearnLoom connects students globally with specialized Olympiad tutors for customized one-on-one coaching in Mathematics, Cyber/Coding, Science, and English, focusing on higher-order thinking and problem-solving strategies."
+  }
+];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <!-- Schema.org LearningResource & ItemList for Google Rich Snippets -->
+  <!-- Schema.org LearningResource, ItemList & FAQPage for Google Rich Snippets -->
   <script type="application/ld+json" is:inline set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -208,7 +684,8 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
     },
     "mainEntity": {
       "@type": "ItemList",
-      "name": "Free Olympiad Exam Papers (Grades 4-12)",
+      "name": "Free Olympiad Exam Papers (Grades 1-12)",
+      "numberOfItems": papers.length,
       "itemListElement": papers.map((paper, index) => ({
         "@type": "ListItem",
         "position": index + 1,
@@ -219,16 +696,30 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
           "encodingFormat": "application/pdf",
           "url": `https://www.learnloomglobal.com${encodeURI(paper.fileUrl)}`,
           "educationalLevel": paper.grade,
-          "inLanguage": "en",
-          "isAccessibleForFree": true
+          "inLanguage": paper.stream.includes('Hindi') ? 'hi' : 'en',
+          "isAccessibleForFree": true,
+          "keywords": paper.subjects.join(', ')
         }
       }))
     }
   })} />
 
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.a
+      }
+    }))
+  })} />
+
   <main class="container mx-auto px-4 py-8 flex-grow">
     <!-- Hero Section -->
-    <section class="pt-6 pb-12 text-center relative">
+    <section class="pt-6 pb-10 text-center relative">
       <!-- Ambient Glows -->
       <div class="absolute top-0 left-1/4 w-[420px] h-[420px] bg-pink-100/30 rounded-full filter blur-3xl -z-10 pointer-events-none"></div>
       <div class="absolute top-10 right-1/4 w-[350px] h-[350px] bg-amber-100/30 rounded-full filter blur-3xl -z-10 pointer-events-none"></div>
@@ -238,21 +729,21 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
         </svg>
-        <span>Free Educational Downloads • Grades 4 to 12</span>
+        <span>32 Free Official Papers • Grades 1 to 12 • 6 Subjects</span>
       </div>
 
       <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight max-w-4xl mx-auto">
-        Free Olympiad <span class="bg-gradient-to-r from-[#FF2E93] to-[#EA0264] bg-clip-text text-transparent">Question Bank</span> & Past Papers
+        Free Olympiad <span class="bg-gradient-to-r from-[#FF2E93] to-[#EA0264] bg-clip-text text-transparent">Question Bank</span> & Sample Papers
       </h1>
       
-      <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-        Accelerate your competitive exam readiness. Download authentic Olympiad test papers, practice sets, and championship assessments for Mathematics, Science, and Social Studies.
+      <p class="text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+        Accelerate your competitive exam readiness. Download authentic Olympiad test papers, practice sets, and championship assessments for Computer Science, English, Mathematics, Science, Social Studies, and Hindi.
       </p>
 
       <!-- Search & Filters Container -->
-      <div class="max-w-3xl mx-auto bg-white/80 backdrop-blur-md p-3 md:p-4 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/40">
+      <div class="max-w-4xl mx-auto bg-white/85 backdrop-blur-md p-4 md:p-5 rounded-3xl border border-slate-200/70 shadow-xl shadow-slate-200/50">
         <!-- Live Search Input -->
-        <div class="relative mb-3">
+        <div class="relative mb-3.5">
           <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -261,7 +752,7 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
           <input 
             type="text" 
             id="resource-search" 
-            placeholder="Search papers by grade (e.g. Grade 10), subject (e.g. Science), or keyword..." 
+            placeholder="Search by grade (e.g. Grade 6), subject (e.g. Computer Science, English), or topic..." 
             class="w-full pl-11 pr-10 py-3 rounded-2xl bg-slate-50 border border-slate-200/80 text-sm md:text-base text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#EA0264] focus:border-transparent transition-all"
             autocomplete="off"
           />
@@ -276,45 +767,72 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
           </button>
         </div>
 
-        <!-- Grade Category Filter Pills -->
-        <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
-          {categories.map((cat) => (
-            <button
-              type="button"
-              data-category-filter={cat.id}
-              class={`filter-tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 ${
-                cat.id === 'all'
-                  ? 'bg-gradient-to-r from-[#FF2E93] to-[#EA0264] text-white shadow-md shadow-pink-500/20 active-tab'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80 hover:text-slate-900'
-              }`}
-            >
-              <span>{cat.label}</span>
-              <span class={`ml-1.5 text-xs px-1.5 py-0.5 rounded-full ${cat.id === 'all' ? 'bg-white/25 text-white' : 'bg-slate-200 text-slate-600'}`}>
-                {cat.count}
-              </span>
-            </button>
-          ))}
+        <!-- Grade Category Filter Tabs -->
+        <div class="mb-3">
+          <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider text-left pl-1 mb-1.5">Filter by Grade Level</div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            {categories.map((cat) => (
+              <button
+                type="button"
+                data-category-filter={cat.id}
+                class={`filter-tab-btn px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 ${
+                  cat.id === 'all'
+                    ? 'bg-gradient-to-r from-[#FF2E93] to-[#EA0264] text-white shadow-md shadow-pink-500/20 active-tab'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80 hover:text-slate-900'
+                }`}
+              >
+                <span>{cat.label}</span>
+                <span class={`ml-1.5 text-xs px-1.5 py-0.5 rounded-full ${cat.id === 'all' ? 'bg-white/25 text-white' : 'bg-slate-200 text-slate-600'}`}>
+                  {cat.count}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Subject / Stream Filter Pills -->
+        <div class="pt-2 border-t border-slate-100">
+          <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider text-left pl-1 mb-1.5">Filter by Subject Stream</div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            {streams.map((str) => (
+              <button
+                type="button"
+                data-stream-filter={str.id}
+                data-stream-name={str.match || ''}
+                class={`stream-tab-btn px-3 py-1 rounded-lg text-xs font-medium transition-all duration-200 ${
+                  str.id === 'all'
+                    ? 'bg-slate-900 text-white shadow-sm active-stream'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80 hover:text-slate-900'
+                }`}
+              >
+                <span>{str.label}</span>
+                <span class={`ml-1 text-[11px] px-1.5 py-0.2 rounded-full ${str.id === 'all' ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-600'}`}>
+                  {str.count}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Quick Stats Bar -->
     <section class="max-w-4xl mx-auto mb-10 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="bg-white/70 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
-        <div class="text-2xl font-extrabold text-[#EA0264]">11</div>
+      <div class="bg-white/80 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
+        <div class="text-2xl font-extrabold text-[#EA0264]">32</div>
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Official Papers</div>
       </div>
-      <div class="bg-white/70 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
-        <div class="text-2xl font-extrabold text-slate-900">Grades 4-12</div>
+      <div class="bg-white/80 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
+        <div class="text-2xl font-extrabold text-slate-900">Grades 1-12</div>
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Grade Coverage</div>
       </div>
-      <div class="bg-white/70 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
+      <div class="bg-white/80 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
         <div class="text-2xl font-extrabold text-[#EA0264]">100% Free</div>
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">PDF Downloads</div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Instant Downloads</div>
       </div>
-      <div class="bg-white/70 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
-        <div class="text-2xl font-extrabold text-slate-900">3 Streams</div>
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Maths, Science & SST</div>
+      <div class="bg-white/80 backdrop-blur-sm border border-slate-100 p-4 rounded-2xl shadow-sm">
+        <div class="text-2xl font-extrabold text-slate-900">6 Streams</div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">CS, English, Maths & More</div>
       </div>
     </section>
 
@@ -322,101 +840,117 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
     <section class="mb-16">
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="text-2xl font-bold text-slate-900 tracking-tight" id="results-heading">All Question Papers</h2>
-          <p class="text-sm text-slate-500" id="results-count">Showing all 11 examination papers</p>
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight" id="results-heading">All Examination Papers</h2>
+          <p class="text-sm text-slate-500" id="results-count">Showing all 32 examination papers</p>
         </div>
       </div>
 
       <div id="papers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {papers.map((paper) => (
-          <article 
-            class="paper-card bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/70 p-6 flex flex-col justify-between hover:shadow-xl hover:border-pink-300 hover:-translate-y-1 transition-all duration-300 relative group"
-            data-category={paper.category}
-            data-grade={paper.grade.toLowerCase()}
-            data-title={paper.title.toLowerCase()}
-            data-subjects={paper.subjects.join(' ').toLowerCase()}
-            data-stream={paper.stream.toLowerCase()}
-          >
-            <!-- Top Tag Row -->
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold bg-pink-50 text-[#EA0264] border border-pink-200/50">
-                  {paper.grade}
-                </span>
+        {papers.map((paper) => {
+          // Dynamic badge styling based on stream
+          let streamBadgeClass = "bg-slate-100 text-slate-700 border-slate-200";
+          if (paper.stream === 'Computer Science') {
+            streamBadgeClass = "bg-cyan-50 text-cyan-800 border-cyan-200/80";
+          } else if (paper.stream === 'English Language') {
+            streamBadgeClass = "bg-purple-50 text-purple-800 border-purple-200/80";
+          } else if (paper.stream === 'Hindi Language') {
+            streamBadgeClass = "bg-emerald-50 text-emerald-800 border-emerald-200/80";
+          } else if (paper.stream === 'Social Studies') {
+            streamBadgeClass = "bg-amber-50 text-amber-900 border-amber-200/80";
+          } else if (paper.stream === 'General Science & Maths') {
+            streamBadgeClass = "bg-sky-50 text-sky-800 border-sky-200/80";
+          } else if (paper.stream === 'Advanced STEM') {
+            streamBadgeClass = "bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200/80";
+          }
 
-                <div class="flex items-center space-x-1.5">
-                  {paper.popular && (
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800">
-                      Popular
-                    </span>
-                  )}
-                  <span class="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
-                    {paper.fileSize}
+          return (
+            <article 
+              class="paper-card bg-white/90 backdrop-blur-md rounded-2xl border border-slate-200/70 p-6 flex flex-col justify-between hover:shadow-xl hover:border-pink-300 hover:-translate-y-1 transition-all duration-300 relative group"
+              data-category={paper.category}
+              data-grade={paper.grade.toLowerCase()}
+              data-title={paper.title.toLowerCase()}
+              data-subjects={paper.subjects.join(' ').toLowerCase()}
+              data-stream={paper.stream.toLowerCase()}
+            >
+              <!-- Top Tag Row -->
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold bg-pink-50 text-[#EA0264] border border-pink-200/50">
+                    {paper.grade}
                   </span>
-                </div>
-              </div>
 
-              <!-- Stream Tag if present -->
-              {paper.stream !== 'General' && (
+                  <div class="flex items-center space-x-1.5">
+                    {paper.popular && (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800">
+                        Popular
+                      </span>
+                    )}
+                    <span class="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
+                      {paper.fileSize}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Stream Tag -->
                 <div class="mb-2">
-                  <span class="text-[11px] font-semibold text-indigo-700 bg-indigo-50 border border-indigo-100 px-2.5 py-0.5 rounded-full">
+                  <span class={`text-[11px] font-semibold border px-2.5 py-0.5 rounded-full ${streamBadgeClass}`}>
                     {paper.stream}
                   </span>
                 </div>
-              )}
 
-              <!-- Title -->
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-[#EA0264] transition-colors leading-snug mb-2">
-                {paper.title}
-              </h3>
+                <!-- Title -->
+                <h3 class="text-lg font-bold text-slate-900 group-hover:text-[#EA0264] transition-colors leading-snug mb-2">
+                  {paper.title}
+                </h3>
 
-              <!-- Description -->
-              <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
-                {paper.description}
-              </p>
+                <!-- Description -->
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                  {paper.description}
+                </p>
 
-              <!-- Subject Pills -->
-              <div class="flex flex-wrap gap-1.5 mb-5">
-                {paper.subjects.map((subj) => (
-                  <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md">
-                    {subj}
-                  </span>
-                ))}
+                <!-- Subject Pills -->
+                <div class="flex flex-wrap gap-1.5 mb-5">
+                  {paper.subjects.map((subj) => (
+                    <span class="text-[11px] font-medium bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-md">
+                      {subj}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <!-- Card Actions -->
-            <div class="pt-4 border-t border-slate-100 flex items-center gap-2.5">
-              <!-- Download Button -->
-              <a 
-                href={encodeURI(paper.fileUrl)} 
-                download={paper.fileName}
-                class="flex-1 inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#FF2E93] to-[#EA0264] text-white text-xs md:text-sm font-bold py-2.5 px-4 rounded-xl shadow-md shadow-pink-500/10 hover:shadow-lg hover:shadow-pink-500/20 active:scale-[0.98] transition-all"
-                aria-label={`Download ${paper.title} PDF`}
-              >
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                </svg>
-                <span>Download PDF</span>
-              </a>
+              <!-- Card Actions -->
+              <div class="pt-4 border-t border-slate-100 flex items-center gap-2.5">
+                <!-- Download Button -->
+                <a 
+                  href={encodeURI(paper.fileUrl)} 
+                  download={paper.fileName}
+                  class="flex-1 inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#FF2E93] to-[#EA0264] text-white text-xs md:text-sm font-bold py-2.5 px-4 rounded-xl shadow-md shadow-pink-500/10 hover:shadow-lg hover:shadow-pink-500/20 active:scale-[0.98] transition-all"
+                  aria-label={`Download ${paper.title} PDF`}
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  <span>Download PDF</span>
+                </a>
 
-              <!-- Preview Button -->
-              <a 
-                href={encodeURI(paper.fileUrl)} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="inline-flex items-center justify-center p-2.5 rounded-xl border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 hover:border-slate-300 transition-colors"
-                title={`Preview ${paper.title} in new tab`}
-                aria-label={`Preview ${paper.title} in new tab`}
-              >
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                </svg>
-              </a>
-            </div>
-          </article>
-        ))}
+                <!-- Preview Button -->
+                <a 
+                  href={encodeURI(paper.fileUrl)} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center p-2.5 rounded-xl border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100 hover:border-slate-300 transition-colors"
+                  title={`Preview ${paper.title} in new tab`}
+                  aria-label={`Preview ${paper.title} in new tab`}
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
 
       <!-- No Results State (hidden by default) -->
@@ -438,7 +972,7 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
     </section>
 
     <!-- Tutoring Help Banner (Conversion Hook) -->
-    <section class="max-w-5xl mx-auto mb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl border border-slate-800">
+    <section class="max-w-5xl mx-auto mb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl border border-slate-800">
       <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-pink-500/20 rounded-full filter blur-3xl pointer-events-none"></div>
       <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
         <div class="text-center md:text-left max-w-xl">
@@ -465,14 +999,41 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
         </div>
       </div>
     </section>
+
+    <!-- FAQ Accordion Section for SEO -->
+    <section class="max-w-4xl mx-auto mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+        <p class="text-sm text-slate-500 mt-1">Everything you need to know about our Olympiad question bank and resources</p>
+      </div>
+
+      <div class="space-y-3.5">
+        {faqs.map((faq, idx) => (
+          <details class="group bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200/70 p-5 open:shadow-md transition-all duration-200">
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-800 text-base group-hover:text-[#EA0264] transition-colors list-none">
+              <span>{faq.q}</span>
+              <span class="ml-4 flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 group-hover:bg-pink-50 group-open:rotate-180 flex items-center justify-center transition-transform duration-200 text-slate-500 group-hover:text-[#EA0264]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </span>
+            </summary>
+            <p class="mt-3.5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
   </main>
 
-  <!-- Client-side Interactive Filter & Search Script -->
+  <!-- Client-side Interactive Multi-dimensional Filter & Search Script -->
   <script is:inline>
     document.addEventListener('DOMContentLoaded', () => {
       const searchInput = document.getElementById('resource-search');
       const clearSearchBtn = document.getElementById('clear-search');
-      const filterButtons = document.querySelectorAll('[data-category-filter]');
+      const categoryButtons = document.querySelectorAll('[data-category-filter]');
+      const streamButtons = document.querySelectorAll('[data-stream-filter]');
       const paperCards = document.querySelectorAll('.paper-card');
       const noResults = document.getElementById('no-results');
       const resetBtn = document.getElementById('reset-filters');
@@ -480,6 +1041,7 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
       const resultsCount = document.getElementById('results-count');
 
       let currentCategory = 'all';
+      let currentStream = 'all';
       let currentQuery = '';
 
       function filterPapers() {
@@ -494,13 +1056,14 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
           const stream = card.getAttribute('data-stream') || '';
 
           const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+          const matchesStream = (currentStream === 'all' || stream.includes(currentStream.toLowerCase()));
           const matchesQuery = !query || 
             title.includes(query) || 
             grade.includes(query) || 
             subjects.includes(query) || 
             stream.includes(query);
 
-          if (matchesCategory && matchesQuery) {
+          if (matchesCategory && matchesStream && matchesQuery) {
             card.style.display = 'flex';
             visibleCount++;
           } else {
@@ -531,10 +1094,10 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
         }
       }
 
-      // Filter Tab buttons click handler
-      filterButtons.forEach(btn => {
+      // Category tab click handler
+      categoryButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          filterButtons.forEach(b => {
+          categoryButtons.forEach(b => {
             b.classList.remove('bg-gradient-to-r', 'from-[#FF2E93]', 'to-[#EA0264]', 'text-white', 'shadow-md', 'shadow-pink-500/20', 'active-tab');
             b.classList.add('bg-slate-100', 'text-slate-600');
             const badge = b.querySelector('span:last-child');
@@ -553,6 +1116,34 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
           }
 
           currentCategory = btn.getAttribute('data-category-filter') || 'all';
+          filterPapers();
+        });
+      });
+
+      // Stream tab click handler
+      streamButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          streamButtons.forEach(b => {
+            b.classList.remove('bg-slate-900', 'text-white', 'shadow-sm', 'active-stream');
+            b.classList.add('bg-slate-100', 'text-slate-600');
+            const badge = b.querySelector('span:last-child');
+            if (badge) {
+              badge.classList.remove('bg-white/20', 'text-white');
+              badge.classList.add('bg-slate-200', 'text-slate-600');
+            }
+          });
+
+          btn.classList.remove('bg-slate-100', 'text-slate-600');
+          btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm', 'active-stream');
+          const badge = btn.querySelector('span:last-child');
+          if (badge) {
+            badge.classList.remove('bg-slate-200', 'text-slate-600');
+            badge.classList.add('bg-white/20', 'text-white');
+          }
+
+          const streamId = btn.getAttribute('data-stream-filter');
+          const streamName = btn.getAttribute('data-stream-name');
+          currentStream = (streamId === 'all') ? 'all' : streamName;
           filterPapers();
         });
       });
@@ -582,8 +1173,10 @@ const canonicalUrl = "https://www.learnloomglobal.com/resources";
         resetBtn.addEventListener('click', () => {
           if (searchInput) searchInput.value = '';
           currentQuery = '';
-          const allTab = document.querySelector('[data-category-filter="all"]');
-          if (allTab) allTab.click();
+          const allCat = document.querySelector('[data-category-filter="all"]');
+          if (allCat) allCat.click();
+          const allStr = document.querySelector('[data-stream-filter="all"]');
+          if (allStr) allStr.click();
         });
       }
     });

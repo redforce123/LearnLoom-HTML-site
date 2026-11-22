@@ -8,7 +8,7 @@
 <!-- Homepage: Highest priority -->
 <url>
   <loc>https://www.learnloomglobal.com/</loc>
-  <lastmod>2026-05-31</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
@@ -16,7 +16,7 @@
 <!-- About Us Page -->
 <url>
   <loc>https://www.learnloomglobal.com/AboutUs</loc>
-  <lastmod>2026-05-31</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
@@ -24,7 +24,7 @@
 <!-- Workshop Page -->
 <url>
   <loc>https://www.learnloomglobal.com/workshop</loc>
-  <lastmod>2026-05-31</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
@@ -32,7 +32,7 @@
 <!-- FAQ Page -->
 <url>
   <loc>https://www.learnloomglobal.com/faq</loc>
-  <lastmod>2026-05-31</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
@@ -40,7 +40,7 @@
 <!-- Contact Us Page -->
 <url>
   <loc>https://www.learnloomglobal.com/Contactus</loc>
-  <lastmod>2026-05-31</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>
 </url>
@@ -48,85 +48,217 @@
 <!-- Blogs Page -->
 <url>
   <loc>https://www.learnloomglobal.com/blogs</loc>
-  <lastmod>2026-05-31</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 
-<!-- Free Resources (Olympiad Question Bank) -->
+<!-- Free Resources (Olympiad Question Bank) Hub Page -->
 <url>
   <loc>https://www.learnloomglobal.com/resources</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
+  <priority>0.95</priority>
 </url>
 
-<!-- Olympiad Question Bank PDF Documents for Direct Google Indexing -->
+<!-- 32 Standardized Olympiad Question Bank PDF Documents for Direct Google Indexing -->
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-01_Computer-Science.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-01_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-02_Computer-Science.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-02_English.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-02_Hindi.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-02_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-03_Computer-Science.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-03_Hindi.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%201-3)/Olympiad_Grade-03_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-04_English.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-04_Final.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-04_Hindi.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-05_Computer-Science.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-05_Hindi.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-05_Set-01.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-05_Set-02.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grade%208)/Olympiad_Grade-08.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Primary_School%20(Grades%204-5)/Olympiad_Grade-05_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-06_Computer-Science.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-06_Hindi.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-06_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-07_English.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-07_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-08_English.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-08_General.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grades%206-8)/Olympiad_Grade-08_Social-Studies.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/General_Science_Maths/Olympiad_Grade-09_General.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/General_Science_Maths/Olympiad_Grade-10_General.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/General_Science_Maths/Olympiad_Grade-10_Final.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/Social_Studies/Olympiad_Grade-09_Social-Studies.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/General_Science_Maths/Olympiad_Grade-10_General.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/General_Science_Maths/Olympiad_Grade-10_Final.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Secondary_School%20(Grades%209-10)/Social_Studies/Olympiad_Grade-10_Social-Studies.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Senior_Secondary%20(Grades%2011-12)/Olympiad_Grade-11.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Senior_Secondary%20(Grades%2011-12)/Olympiad_Grade-12.pdf</loc>
-  <lastmod>2026-09-21</lastmod>
+  <lastmod>2026-11-04</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.learnloomglobal.com/resources/Olympiad_Question_Bank/Middle_School%20(Grade%208)/Olympiad_Grade-08.pdf</loc>
+  <lastmod>2026-11-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 
 </urlset>
